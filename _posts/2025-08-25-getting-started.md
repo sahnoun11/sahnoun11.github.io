@@ -11,6 +11,7 @@ tags:
 - Bug Bounty
 date: 2025-08-25 01:00 +0100
 description: In this article, we dive deep into a critical security flaw in Apache DolphinScheduler (CVE-2022-45875) a command injection vulnerability within its alert script execution module. This weakness allows attackers to inject and execute arbitrary commands, potentially leading to remote code execution (RCE) and full system compromise.
+image: assets/img/CVE.jpeg
 ---
 
 ## Introduction
@@ -24,7 +25,7 @@ This article delves into the technical details of the vulnerability, how it is e
 The vulnerability resides in the ScriptSender class of the dolphinscheduler-alert-script module. The affected code is present in the following file: [View vulnerable code on GitHub](https://github.com/apache/dolphinscheduler/blob/3.0.0-release/dolphinscheduler-alert/dolphinscheduler-alert-plugins/dolphinscheduler-alert-script/src/main/java/org/apache/dolphinscheduler/plugin/alert/script/ScriptSender.java)
 
 #### Vulnerable Code Snippet :
-```html
+```java
 private AlertResult executeShellScript(String title, String content) {
     AlertResult alertResult = new AlertResult();
     alertResult.setStatus("false");
