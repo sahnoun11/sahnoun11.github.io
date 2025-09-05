@@ -100,7 +100,7 @@ This executes the deletion command, removing carlos from the database and comple
     - Require explicit user confirmation before executing high-impact actions (e.g., DELETE or UPDATE).
     - Log and monitor such requests for accountability and auditing purposes.
 
-## Technical Deep Dive: Chaining Vulnerabilities in Practice
+### Technical Deep Dive: Chaining Vulnerabilities in Practice
 
 To illustrate how attackers can chain vulnerabilities in LLM APIs, let’s analyze a practical example from the PortSwigger Web Security Academy lab titled [Exploiting Vulnerabilities in LLM APIs](https://portswigger.net/web-security/llm-attacks/lab-exploiting-vulnerabilities-in-llm-apis). This lab demonstrates how an OS command injection vulnerability in an LLM-integrated API can be exploited to delete a file from a user’s home directory.
 
