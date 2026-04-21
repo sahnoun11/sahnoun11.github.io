@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web LLM Attacks - A Deep Dive into the Security Risks of AI-Powered Web Applications
+title: "Web LLM Attacks - Part 1: A Deep Dive into the Security Risks of AI-Powered Web Applications"
 categories:
 - IA Exploit
 tags:
