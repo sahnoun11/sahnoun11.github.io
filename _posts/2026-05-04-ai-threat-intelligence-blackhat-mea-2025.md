@@ -247,7 +247,7 @@ Key prompt engineering techniques that significantly improve reliability in secu
 
 ---
 
-## Part 4 — Threat Intelligence Maturity
+## Part 4 — Threat Hunting & Intelligence Maturity
 
 ![Slide — What a mature threat hunting program asks](/assets/img/slide-08.jpg)
 
