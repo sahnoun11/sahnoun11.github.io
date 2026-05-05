@@ -32,7 +32,7 @@ That rubber duck in the black balaclava is not just swag. In security culture, t
 
 The coin. The badge. The lanyard. Standing in that room in Riyadh, Saudi Arabia, as a Tunisian cybersecurity engineer — that was a long time coming.
 
-This post is me putting *everything* from that session into writing. Not a summary. Everything. The depth I could not fit into 45 minutes, the architecture decisions behind **ThreatLens**, and why I believe the engineers reading this will build the tools that matter most in the next decade.
+This post is me putting *everything* from that session into writing. Not a summary. Everything. The depth I could not fit into 20 minutes, the architecture decisions behind **ThreatLens**, and why I believe the engineers reading this will build the tools that matter most in the next decade.
 
 ---
 
