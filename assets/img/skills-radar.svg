@@ -1,0 +1,111 @@
+<svg width="700" height="620" viewBox="0 0 700 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/><stop offset="100%" style="stop-color:#050d08"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="700" height="620" fill="url(#bg)" rx="12"/>
+  <text x="350" y="32" font-family="'Courier New',monospace" font-size="13" fill="#9fef00" text-anchor="middle" font-weight="bold" letter-spacing="2" filter="url(#glow)">◈  SKILLS FOR THE NEXT-GEN SECURITY ENGINEER  ◈</text>
+  <text x="350" y="50" font-family="monospace" font-size="8" fill="#4a8f20" text-anchor="middle">Build the tools that matter. These are not optional skills — they are the job.</text>
+  <line x1="50" y1="58" x2="650" y2="58" stroke="#9fef00" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Radar chart center -->
+  <!-- cx=350, cy=330, max radius=200 -->
+  <!-- 8 skills = 45 degrees each -->
+  <!-- Skills: Vector DBs, LLM Fine-tuning, RAG Design, Prompt Eng, Adversarial ML, Eval Frameworks, SIEM/EDR, Cyber Fundamentals -->
+
+  <!-- Radar grid circles -->
+  <g stroke="#9fef00" stroke-width="0.5" fill="none" opacity="0.15" transform="translate(350,330)">
+    <polygon points="0,-200 141,-141 200,0 141,141 0,200 -141,141 -200,0 -141,-141"/>
+    <polygon points="0,-150 106,-106 150,0 106,106 0,150 -106,106 -150,0 -106,-106"/>
+    <polygon points="0,-100 71,-71 100,0 71,71 0,100 -71,71 -100,0 -71,-71"/>
+    <polygon points="0,-50 35,-35 50,0 35,35 0,50 -35,35 -50,0 -35,-35"/>
+  </g>
+
+  <!-- Radar axes -->
+  <g stroke="#9fef00" stroke-width="0.6" opacity="0.25" transform="translate(350,330)">
+    <line x1="0" y1="0" x2="0" y2="-200"/>
+    <line x1="0" y1="0" x2="141" y2="-141"/>
+    <line x1="0" y1="0" x2="200" y2="0"/>
+    <line x1="0" y1="0" x2="141" y2="141"/>
+    <line x1="0" y1="0" x2="0" y2="200"/>
+    <line x1="0" y1="0" x2="-141" y2="141"/>
+    <line x1="0" y1="0" x2="-200" y2="0"/>
+    <line x1="0" y1="0" x2="-141" y2="-141"/>
+  </g>
+
+  <!-- Data polygon: skill levels (0-200 scale) -->
+  <!-- Vector DB:190, LLM Fine-tuning:160, RAG Design:180, Prompt Eng:195, AdversarialML:140, Eval:150, SIEM/EDR:170, CyberFund:200 -->
+  <!-- Angles: top=270deg, then +45 each -->
+  <!-- Top(270): 0,-190 -->
+  <!-- 315deg: 134,-134 = 0.707*190=134 -->
+  <!-- 0deg: 160,0 -->
+  <!-- 45deg: 127,127 = 0.707*180=127 -->
+  <!-- 90deg: 0,195 -->
+  <!-- 135deg: -99,99 = 0.707*140=99 -->
+  <!-- 180deg: -150,0 -->
+  <!-- 225deg: -106,-106 = 0.707*150 -->
+  <polygon transform="translate(350,330)"
+    points="0,-190 134,-134 160,0 127,127 0,195 -99,99 -150,0 -106,-106"
+    fill="#9fef00" fill-opacity="0.12" stroke="#9fef00" stroke-width="1.5" stroke-opacity="0.8"/>
+
+  <!-- Skill dots -->
+  <g fill="#9fef00" filter="url(#glow)">
+    <circle cx="350" cy="140" r="5"/><!-- Vector DB: top -->
+    <circle cx="484" cy="196" r="5"/><!-- LLM fine-tune: 315deg -->
+    <circle cx="510" cy="330" r="5"/><!-- RAG Design: 0deg -->
+    <circle cx="477" cy="457" r="5"/><!-- Prompt Eng: 45deg -->
+    <circle cx="350" cy="525" r="5"/><!-- Adversarial ML: 90deg -->
+  </g>
+  <g fill="#2ee7b6" filter="url(#glow)">
+    <circle cx="251" cy="429" r="5"/><!-- Eval Frameworks: 135deg -->
+    <circle cx="200" cy="330" r="5"/><!-- SIEM/EDR: 180deg -->
+    <circle cx="244" cy="224" r="5"/><!-- Cyber Fundamentals: 225deg -->
+  </g>
+
+  <!-- Skill labels -->
+  <!-- Vector DB — top -->
+  <text x="350" y="118" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" font-weight="bold">Vector DB</text>
+  <text x="350" y="130" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">pgvector · Pinecone · Weaviate</text>
+
+  <!-- LLM Fine-tuning — top-right -->
+  <text x="520" y="180" font-family="monospace" font-size="9" fill="#9fef00" font-weight="bold">LLM Fine-tuning</text>
+  <text x="520" y="192" font-family="monospace" font-size="7.5" fill="#4a8f20">LoRA · QLoRA · PEFT</text>
+
+  <!-- RAG Design — right -->
+  <text x="524" y="325" font-family="monospace" font-size="9" fill="#9fef00" font-weight="bold">RAG System Design</text>
+  <text x="524" y="337" font-family="monospace" font-size="7.5" fill="#4a8f20">chunking · retrieval · eval</text>
+
+  <!-- Prompt Eng — bottom-right -->
+  <text x="492" y="462" font-family="monospace" font-size="9" fill="#9fef00" font-weight="bold">Prompt Engineering</text>
+  <text x="492" y="474" font-family="monospace" font-size="7.5" fill="#4a8f20">CoT · few-shot · structured out</text>
+
+  <!-- Adversarial ML — bottom -->
+  <text x="350" y="548" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" font-weight="bold">Adversarial ML</text>
+  <text x="350" y="560" font-family="monospace" font-size="7.5" fill="#2ee7b6" text-anchor="middle">evasion · poisoning · robustness</text>
+
+  <!-- Eval Frameworks — bottom-left -->
+  <text x="40" y="428" font-family="monospace" font-size="9" fill="#2ee7b6" font-weight="bold">AI Eval</text>
+  <text x="40" y="440" font-family="monospace" font-size="7.5" fill="#1aaa88">RAGAS · hallucination</text>
+  <text x="40" y="452" font-family="monospace" font-size="7.5" fill="#1aaa88">detection · benchmarks</text>
+
+  <!-- SIEM/EDR — left -->
+  <text x="10" y="318" font-family="monospace" font-size="9" fill="#2ee7b6" font-weight="bold">SIEM / EDR</text>
+  <text x="10" y="330" font-family="monospace" font-size="7.5" fill="#1aaa88">Splunk · Sigma rules</text>
+  <text x="10" y="342" font-family="monospace" font-size="7.5" fill="#1aaa88">KQL · YARA</text>
+
+  <!-- Cyber Fundamentals — top-left -->
+  <text x="40" y="218" font-family="monospace" font-size="9" fill="#2ee7b6" font-weight="bold">Cyber Core</text>
+  <text x="40" y="230" font-family="monospace" font-size="7.5" fill="#1aaa88">ATT&amp;CK · kill chain</text>
+  <text x="40" y="242" font-family="monospace" font-size="7.5" fill="#1aaa88">network · malware</text>
+
+  <!-- Center label -->
+  <text x="350" y="322" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle" opacity="0.6">NEXT-GEN</text>
+  <text x="350" y="334" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle" opacity="0.6">SEC ENG</text>
+
+  <!-- Legend -->
+  <line x1="50" y1="585" x2="650" y2="585" stroke="#9fef00" stroke-width="0.5" opacity="0.2"/>
+  <text x="350" y="603" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">Black Hat MEA 2025 · Tek-Up University · ThreatLens · Oussama Sahnoun</text>
+</svg>

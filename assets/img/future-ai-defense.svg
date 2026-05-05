@@ -1,0 +1,122 @@
+<svg width="1000" height="480" viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/><stop offset="100%" style="stop-color:#050d08"/>
+    </linearGradient>
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9fef00;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:#9fef00"/>
+      <stop offset="70%" style="stop-color:#2ee7b6"/>
+      <stop offset="100%" style="stop-color:#2ee7b6;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1000" height="480" fill="url(#bg)" rx="12"/>
+
+  <!-- Background grid -->
+  <g stroke="#9fef00" stroke-width="0.3" opacity="0.06">
+    <line x1="0" y1="48" x2="1000" y2="48"/><line x1="0" y1="96" x2="1000" y2="96"/>
+    <line x1="0" y1="144" x2="1000" y2="144"/><line x1="0" y1="192" x2="1000" y2="192"/>
+    <line x1="0" y1="240" x2="1000" y2="240"/><line x1="0" y1="288" x2="1000" y2="288"/>
+    <line x1="0" y1="336" x2="1000" y2="336"/><line x1="0" y1="384" x2="1000" y2="384"/>
+    <line x1="0" y1="432" x2="1000" y2="432"/>
+    <line x1="100" y1="0" x2="100" y2="480"/><line x1="200" y1="0" x2="200" y2="480"/>
+    <line x1="300" y1="0" x2="300" y2="480"/><line x1="400" y1="0" x2="400" y2="480"/>
+    <line x1="500" y1="0" x2="500" y2="480"/><line x1="600" y1="0" x2="600" y2="480"/>
+    <line x1="700" y1="0" x2="700" y2="480"/><line x1="800" y1="0" x2="800" y2="480"/>
+    <line x1="900" y1="0" x2="900" y2="480"/>
+  </g>
+
+  <!-- Title -->
+  <text x="500" y="34" font-family="'Courier New',monospace" font-size="14" fill="#9fef00" text-anchor="middle" font-weight="bold" letter-spacing="3" filter="url(#glow)">◈  THE FUTURE OF AI-POWERED DEFENSE  ◈</text>
+  <rect x="150" y="42" width="700" height="2" rx="1" fill="url(#glowLine)"/>
+
+  <!-- 4 future vectors in a 2x2 grid -->
+
+  <!-- TOP LEFT: Autonomous Agents -->
+  <rect x="20" y="60" width="460" height="180" rx="10" fill="#0a0d14" stroke="#9fef00" stroke-width="1.5"/>
+  <rect x="20" y="60" width="460" height="32" rx="10" fill="#0a1f10"/>
+  <rect x="20" y="80" width="460" height="12" fill="#0a1f10"/>
+  <text x="38" y="81" font-family="monospace" font-size="11" fill="#9fef00" font-weight="bold">🤖  AUTONOMOUS HUNTING AGENTS</text>
+  <text x="38" y="112" font-family="monospace" font-size="8.5" fill="#6abf00">LLMs + tool-use = agentic threat hunting systems</text>
+  <text x="38" y="130" font-family="monospace" font-size="7.5" fill="#4a8f20">The analyst defines a hypothesis. The agent:</text>
+  <!-- Flow boxes -->
+  <rect x="38" y="138" width="80" height="22" rx="4" fill="#0d2010" stroke="#9fef00" stroke-width="0.8"/>
+  <text x="78" y="153" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle">Queries SIEM</text>
+  <line x1="120" y1="149" x2="136" y2="149" stroke="#9fef00" stroke-width="1" marker-end="url(#ag)"/>
+  <rect x="138" y="138" width="80" height="22" rx="4" fill="#0d2010" stroke="#9fef00" stroke-width="0.8"/>
+  <text x="178" y="153" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle">Runs Sigma</text>
+  <line x1="220" y1="149" x2="236" y2="149" stroke="#9fef00" stroke-width="1" marker-end="url(#ag)"/>
+  <rect x="238" y="138" width="80" height="22" rx="4" fill="#0d2010" stroke="#9fef00" stroke-width="0.8"/>
+  <text x="278" y="153" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle">Correlates</text>
+  <line x1="320" y1="149" x2="336" y2="149" stroke="#9fef00" stroke-width="1" marker-end="url(#ag)"/>
+  <rect x="338" y="138" width="100" height="22" rx="4" fill="#0a2a18" stroke="#2ee7b6" stroke-width="1"/>
+  <text x="388" y="153" font-family="monospace" font-size="7" fill="#2ee7b6" text-anchor="middle">Reports to analyst</text>
+  <text x="38" y="186" font-family="monospace" font-size="7.5" fill="#2ee7b6">Skills needed: LangChain agents · MCP tools · SIEM APIs · ReAct pattern</text>
+  <text x="38" y="200" font-family="monospace" font-size="7.5" fill="#1a7a50">ETA: 2025–2026 production deployments already emerging in enterprise SOCs</text>
+  <text x="38" y="214" font-family="monospace" font-size="7.5" fill="#9fef00">→ ThreatLens roadmap: agentic mode with auto-pivot across log sources</text>
+  <text x="38" y="228" font-family="monospace" font-size="7" fill="#333">Status: ████████░░ 80% of the primitives exist today</text>
+
+  <!-- TOP RIGHT: Real-time TI Synthesis -->
+  <rect x="520" y="60" width="460" height="180" rx="10" fill="#0a0d14" stroke="#2ee7b6" stroke-width="1.5"/>
+  <rect x="520" y="60" width="460" height="32" rx="10" fill="#051520"/>
+  <rect x="520" y="80" width="460" height="12" fill="#051520"/>
+  <text x="538" y="81" font-family="monospace" font-size="11" fill="#2ee7b6" font-weight="bold">📡  REAL-TIME TI SYNTHESIS</text>
+  <text x="538" y="112" font-family="monospace" font-size="8.5" fill="#1aaa88">Static weekly reports → continuous streaming intelligence</text>
+  <text x="538" y="130" font-family="monospace" font-size="7.5" fill="#1a8870">Live pipeline: feeds ingested → chunked → embedded → searchable in real-time</text>
+  <!-- Stream visualization -->
+  <rect x="538" y="138" width="420" height="36" rx="4" fill="#050d08" stroke="#2ee7b6" stroke-width="0.7"/>
+  <text x="546" y="152" font-family="monospace" font-size="6.5" fill="#2ee7b6">OSINT ──▶ NVD ──▶ VirusTotal ──▶ MISP ──▶ TAXII ──▶ </text>
+  <text x="546" y="165" font-family="monospace" font-size="6.5" fill="#9fef00">                              → embed → pgvector → ThreatLens answers in real-time</text>
+  <text x="538" y="192" font-family="monospace" font-size="7.5" fill="#1a8870">Skills needed: Kafka · streaming embeddings · incremental RAG updates</text>
+  <text x="538" y="206" font-family="monospace" font-size="7.5" fill="#2ee7b6">ETA: 2026 — latency gap closes to &lt;5 min from feed publication to queryable</text>
+  <text x="538" y="220" font-family="monospace" font-size="7.5" fill="#1aaa88">→ ThreatLens roadmap: live OSINT ingestion via webhook connectors</text>
+  <text x="538" y="234" font-family="monospace" font-size="7" fill="#333">Status: ██████░░░░ 60% — streaming infra is the gap</text>
+
+  <!-- BOTTOM LEFT: Adversarial AI Arms Race -->
+  <rect x="20" y="258" width="460" height="185" rx="10" fill="#0a0d14" stroke="#ff3e3e" stroke-width="1.5"/>
+  <rect x="20" y="258" width="460" height="32" rx="10" fill="#1a0808"/>
+  <rect x="20" y="278" width="460" height="12" fill="#1a0808"/>
+  <text x="38" y="279" font-family="monospace" font-size="11" fill="#ff3e3e" font-weight="bold">⚔  ADVERSARIAL AI ARMS RACE</text>
+  <text x="38" y="310" font-family="monospace" font-size="8.5" fill="#cc4444">Attackers are also using AI — this is not hypothetical</text>
+  <!-- Two column comparison -->
+  <text x="38" y="328" font-family="monospace" font-size="7.5" fill="#ff3e3e">OFFENSE (AI-powered):</text>
+  <text x="260" y="328" font-family="monospace" font-size="7.5" fill="#9fef00">DEFENSE (AI-powered):</text>
+  <line x1="248" y1="322" x2="248" y2="418" stroke="#444" stroke-width="0.5"/>
+  <text x="38" y="342" font-family="monospace" font-size="7" fill="#884444">• AI-generated phishing</text>
+  <text x="260" y="342" font-family="monospace" font-size="7" fill="#4a8f20">• AI phishing detection</text>
+  <text x="38" y="354" font-family="monospace" font-size="7" fill="#884444">• Polymorphic malware</text>
+  <text x="260" y="354" font-family="monospace" font-size="7" fill="#4a8f20">• Behavioral AI detection</text>
+  <text x="38" y="366" font-family="monospace" font-size="7" fill="#884444">• AI vuln discovery</text>
+  <text x="260" y="366" font-family="monospace" font-size="7" fill="#4a8f20">• AI patch prioritization</text>
+  <text x="38" y="378" font-family="monospace" font-size="7" fill="#884444">• Deepfake social eng.</text>
+  <text x="260" y="378" font-family="monospace" font-size="7" fill="#4a8f20">• Multimodal detection</text>
+  <text x="38" y="390" font-family="monospace" font-size="7" fill="#884444">• LLM prompt injection</text>
+  <text x="260" y="390" font-family="monospace" font-size="7" fill="#4a8f20">• LLM hardening / RBAC</text>
+  <text x="38" y="410" font-family="monospace" font-size="7.5" fill="#ff8484">Window is closing. Build defenses now while attackers still</text>
+  <text x="38" y="422" font-family="monospace" font-size="7.5" fill="#ff8484">lag in deployment sophistication.</text>
+  <text x="38" y="436" font-family="monospace" font-size="7" fill="#333">Status: ██████████ active NOW — not a future concern</text>
+
+  <!-- BOTTOM RIGHT: Explainable AI -->
+  <rect x="520" y="258" width="460" height="185" rx="10" fill="#0a0d14" stroke="#c16cfa" stroke-width="1.5"/>
+  <rect x="520" y="258" width="460" height="32" rx="10" fill="#150520"/>
+  <rect x="520" y="278" width="460" height="12" fill="#150520"/>
+  <text x="538" y="279" font-family="monospace" font-size="11" fill="#c16cfa" font-weight="bold">🔬  EXPLAINABLE AI IN SECURITY</text>
+  <text x="538" y="310" font-family="monospace" font-size="8.5" fill="#9040d0">Black-box decisions won't be trusted in enterprise environments</text>
+  <!-- Explainability example -->
+  <rect x="538" y="318" width="420" height="70" rx="4" fill="#050d08" stroke="#c16cfa" stroke-width="0.7"/>
+  <text x="546" y="332" font-family="monospace" font-size="7" fill="#c16cfa">ThreatLens answer (explainable):</text>
+  <text x="546" y="345" font-family="monospace" font-size="6.5" fill="#9fef00">"Traffic is MALICIOUS because:"</text>
+  <text x="546" y="357" font-family="monospace" font-size="6.5" fill="#2ee7b6">  (1) JA3 matches Cobalt Strike C2 (conf: 0.94) [source: chunk#847]</text>
+  <text x="546" y="369" font-family="monospace" font-size="6.5" fill="#2ee7b6">  (2) Dest IP in APT29 feed, 3 sources (conf: 0.87) [source: chunk#231]</text>
+  <text x="546" y="381" font-family="monospace" font-size="6.5" fill="#2ee7b6">  (3) Beacon interval 60±10s pattern (conf: 0.91) [source: chunk#103]</text>
+  <text x="538" y="400" font-family="monospace" font-size="7.5" fill="#9040d0">RAG architecture is inherently explainable — retrieved chunks = evidence chain</text>
+  <text x="538" y="414" font-family="monospace" font-size="7.5" fill="#c16cfa">Skills needed: attention visualization · SHAP · counterfactual explanations</text>
+  <text x="538" y="428" font-family="monospace" font-size="7.5" fill="#7030a0">ThreatLens shows source chunks for every answer — explainability by design</text>
+  <text x="538" y="442" font-family="monospace" font-size="7" fill="#333">Status: ████████░░ RAG gives this for free · attention viz is harder</text>
+
+  <!-- Bottom strip -->
+  <line x1="20" y1="456" x2="980" y2="456" stroke="#9fef00" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="472" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">The defenders who build these systems will shape the next decade of cybersecurity — that generation is in this room.</text>
+</svg>

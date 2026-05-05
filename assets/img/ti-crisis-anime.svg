@@ -1,0 +1,178 @@
+<svg width="1000" height="480" viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/><stop offset="100%" style="stop-color:#050d08"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softglow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1000" height="480" fill="url(#bg)" rx="12"/>
+
+  <!-- Scanlines -->
+  <g opacity="0.025" fill="#9fef00">
+    <rect x="0" y="0" width="1000" height="1"/><rect x="0" y="4" width="1000" height="1"/>
+    <rect x="0" y="8" width="1000" height="1"/><rect x="0" y="12" width="1000" height="1"/>
+    <rect x="0" y="16" width="1000" height="1"/><rect x="0" y="20" width="1000" height="1"/>
+    <rect x="0" y="24" width="1000" height="1"/><rect x="0" y="28" width="1000" height="1"/>
+  </g>
+
+  <!-- Title -->
+  <text x="500" y="36" font-family="'Courier New',monospace" font-size="15" fill="#ff3e3e" text-anchor="middle" font-weight="bold" letter-spacing="3" filter="url(#glow)">◈  THE THREAT INTELLIGENCE CRISIS  ◈</text>
+  <text x="500" y="54" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" opacity="0.6" letter-spacing="2">WHY HUMAN-ONLY ANALYSIS IS FAILING // SOC BURNOUT IS REAL</text>
+  <line x1="60" y1="62" x2="940" y2="62" stroke="#ff3e3e" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- ─── 5 CHALLENGE PANELS ─── -->
+  <!-- Each panel has a number, icon, title, data bar, description -->
+
+  <!-- PANEL 1: VOLUME -->
+  <g transform="translate(20, 75)">
+    <rect x="0" y="0" width="175" height="340" rx="8" fill="#0a0d14" stroke="#ff3e3e" stroke-width="1.5"/>
+    <rect x="0" y="0" width="175" height="35" rx="8" fill="#1a0808"/>
+    <rect x="0" y="18" width="175" height="17" fill="#1a0808"/>
+    <text x="88" y="22" font-family="monospace" font-size="10" fill="#ff3e3e" text-anchor="middle" font-weight="bold" letter-spacing="2">01 · VOLUME</text>
+    <!-- Icon area -->
+    <text x="88" y="80" font-family="monospace" font-size="42" text-anchor="middle" opacity="0.8">📊</text>
+    <!-- Stats -->
+    <text x="88" y="118" font-family="monospace" font-size="20" fill="#ff3e3e" text-anchor="middle" font-weight="bold" filter="url(#glow)">∞</text>
+    <text x="88" y="134" font-family="monospace" font-size="8" fill="#ff8484" text-anchor="middle">ALERTS / DAY</text>
+    <!-- Progress bars showing overload -->
+    <rect x="15" y="148" width="145" height="8" rx="4" fill="#1a0808"/>
+    <rect x="15" y="148" width="145" height="8" rx="4" fill="#ff3e3e" opacity="0.9"/>
+    <text x="15" y="170" font-family="monospace" font-size="7" fill="#ff8484">Network logs</text>
+    <rect x="15" y="174" width="145" height="6" rx="3" fill="#1a0808"/>
+    <rect x="15" y="174" width="130" height="6" rx="3" fill="#ff3e3e" opacity="0.7"/>
+    <text x="15" y="192" font-family="monospace" font-size="7" fill="#ff8484">EDR telemetry</text>
+    <rect x="15" y="196" width="145" height="6" rx="3" fill="#1a0808"/>
+    <rect x="15" y="196" width="145" height="6" rx="3" fill="#ff3e3e" opacity="0.6"/>
+    <text x="15" y="214" font-family="monospace" font-size="7" fill="#ff8484">Email gateway</text>
+    <rect x="15" y="218" width="145" height="6" rx="3" fill="#1a0808"/>
+    <rect x="15" y="218" width="110" height="6" rx="3" fill="#ffaf00" opacity="0.7"/>
+    <text x="15" y="236" font-family="monospace" font-size="7" fill="#cc8800">Cloud API logs</text>
+    <!-- Description -->
+    <line x1="10" y1="245" x2="165" y2="245" stroke="#ff3e3e" stroke-width="0.4" opacity="0.4"/>
+    <text x="88" y="262" font-family="monospace" font-size="7.5" fill="#cc4444" text-anchor="middle">Petabyte-scale</text>
+    <text x="88" y="276" font-family="monospace" font-size="7.5" fill="#cc4444" text-anchor="middle">daily logs. No</text>
+    <text x="88" y="290" font-family="monospace" font-size="7.5" fill="#cc4444" text-anchor="middle">human team can</text>
+    <text x="88" y="304" font-family="monospace" font-size="7.5" fill="#cc4444" text-anchor="middle">keep up with</text>
+    <text x="88" y="318" font-family="monospace" font-size="7.5" fill="#cc4444" text-anchor="middle">this throughput.</text>
+  </g>
+
+  <!-- PANEL 2: CONTEXT LOSS -->
+  <g transform="translate(210, 75)">
+    <rect x="0" y="0" width="175" height="340" rx="8" fill="#0a0d14" stroke="#ffaf00" stroke-width="1.5"/>
+    <rect x="0" y="0" width="175" height="35" rx="8" fill="#1a1005"/>
+    <rect x="0" y="18" width="175" height="17" fill="#1a1005"/>
+    <text x="88" y="22" font-family="monospace" font-size="9" fill="#ffaf00" text-anchor="middle" font-weight="bold" letter-spacing="1">02 · CONTEXT</text>
+    <text x="88" y="80" font-family="monospace" font-size="42" text-anchor="middle" opacity="0.8">🔍</text>
+    <text x="88" y="118" font-family="monospace" font-size="20" fill="#ffaf00" text-anchor="middle" font-weight="bold" filter="url(#glow)">?</text>
+    <text x="88" y="134" font-family="monospace" font-size="8" fill="#cc8800" text-anchor="middle">WHO? WHAT? WHY?</text>
+    <!-- IOC box showing useless data -->
+    <rect x="15" y="148" width="145" height="70" rx="4" fill="#0a0a0a" stroke="#ffaf00" stroke-width="0.8"/>
+    <text x="22" y="162" font-family="monospace" font-size="7" fill="#666">185.220.101.42</text>
+    <text x="125" y="162" font-family="monospace" font-size="7" fill="#ff3e3e">⚠ malicious</text>
+    <text x="22" y="175" font-family="monospace" font-size="7" fill="#666">threat_actor: ???</text>
+    <text x="22" y="188" font-family="monospace" font-size="7" fill="#666">campaign: ???</text>
+    <text x="22" y="201" font-family="monospace" font-size="7" fill="#666">ttp: ???</text>
+    <text x="22" y="213" font-family="monospace" font-size="7" fill="#ffaf00">= USELESS NOISE</text>
+    <line x1="10" y1="228" x2="165" y2="228" stroke="#ffaf00" stroke-width="0.4" opacity="0.4"/>
+    <text x="88" y="245" font-family="monospace" font-size="7.5" fill="#9a7020" text-anchor="middle">Raw IOCs without</text>
+    <text x="88" y="259" font-family="monospace" font-size="7.5" fill="#9a7020" text-anchor="middle">actor, campaign,</text>
+    <text x="88" y="273" font-family="monospace" font-size="7.5" fill="#9a7020" text-anchor="middle">TTP context are</text>
+    <text x="88" y="287" font-family="monospace" font-size="7.5" fill="#9a7020" text-anchor="middle">just noise with</text>
+    <text x="88" y="301" font-family="monospace" font-size="7.5" fill="#9a7020" text-anchor="middle">a scary label.</text>
+  </g>
+
+  <!-- PANEL 3: TOIL -->
+  <g transform="translate(400, 75)">
+    <rect x="0" y="0" width="175" height="340" rx="8" fill="#0a0d14" stroke="#9fef00" stroke-width="1.5"/>
+    <rect x="0" y="0" width="175" height="35" rx="8" fill="#0a1f10"/>
+    <rect x="0" y="18" width="175" height="17" fill="#0a1f10"/>
+    <text x="88" y="22" font-family="monospace" font-size="10" fill="#9fef00" text-anchor="middle" font-weight="bold" letter-spacing="2">03 · TOIL</text>
+    <text x="88" y="80" font-family="monospace" font-size="42" text-anchor="middle" opacity="0.8">⚙️</text>
+    <text x="88" y="118" font-family="monospace" font-size="20" fill="#9fef00" text-anchor="middle" font-weight="bold" filter="url(#glow)">60%</text>
+    <text x="88" y="134" font-family="monospace" font-size="8" fill="#6abf00" text-anchor="middle">TIME WASTED ON TOIL</text>
+    <!-- Donut chart -->
+    <circle cx="88" cy="185" r="36" fill="none" stroke="#1a1a1a" stroke-width="14"/>
+    <circle cx="88" cy="185" r="36" fill="none" stroke="#ff3e3e" stroke-width="14"
+      stroke-dasharray="135.7 90.4" stroke-dashoffset="0" transform="rotate(-90 88 185)"/>
+    <circle cx="88" cy="185" r="36" fill="none" stroke="#9fef00" stroke-width="14"
+      stroke-dasharray="90.4 135.7" stroke-dashoffset="-135.7" transform="rotate(-90 88 185)"/>
+    <text x="88" y="182" font-family="monospace" font-size="8" fill="#ff3e3e" text-anchor="middle">60%</text>
+    <text x="88" y="193" font-family="monospace" font-size="7" fill="#6abf00" text-anchor="middle">toil</text>
+    <!-- Legend -->
+    <rect x="22" y="232" width="8" height="8" rx="1" fill="#ff3e3e"/>
+    <text x="34" y="240" font-family="monospace" font-size="7" fill="#ff8484">Manual tasks</text>
+    <rect x="22" y="246" width="8" height="8" rx="1" fill="#9fef00"/>
+    <text x="34" y="254" font-family="monospace" font-size="7" fill="#6abf00">Real hunting</text>
+    <line x1="10" y1="262" x2="165" y2="262" stroke="#9fef00" stroke-width="0.4" opacity="0.4"/>
+    <text x="88" y="280" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">Pivoting tools,</text>
+    <text x="88" y="294" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">formatting reports,</text>
+    <text x="88" y="308" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">correlating IOCs.</text>
+    <text x="88" y="322" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">Time stolen from</text>
+    <text x="88" y="336" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">actual hunting.</text>
+  </g>
+
+  <!-- PANEL 4: LATENCY -->
+  <g transform="translate(590, 75)">
+    <rect x="0" y="0" width="175" height="340" rx="8" fill="#0a0d14" stroke="#2ee7b6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="175" height="35" rx="8" fill="#051520"/>
+    <rect x="0" y="18" width="175" height="17" fill="#051520"/>
+    <text x="88" y="22" font-family="monospace" font-size="9" fill="#2ee7b6" text-anchor="middle" font-weight="bold" letter-spacing="2">04 · LATENCY</text>
+    <text x="88" y="80" font-family="monospace" font-size="42" text-anchor="middle" opacity="0.8">⚡</text>
+    <text x="88" y="118" font-family="monospace" font-size="20" fill="#2ee7b6" text-anchor="middle" font-weight="bold" filter="url(#glow)">&lt;24h</text>
+    <text x="88" y="134" font-family="monospace" font-size="8" fill="#1aaa88" text-anchor="middle">0DAY WEAPONIZED</text>
+    <!-- Timeline showing gap -->
+    <line x1="20" y1="160" x2="155" y2="160" stroke="#2ee7b6" stroke-width="1" opacity="0.5"/>
+    <circle cx="20" cy="160" r="4" fill="#2ee7b6"/>
+    <circle cx="88" cy="160" r="4" fill="#ff3e3e" filter="url(#glow)"/>
+    <circle cx="155" cy="160" r="4" fill="#9fef00"/>
+    <text x="20" y="176" font-family="monospace" font-size="6" fill="#2ee7b6" text-anchor="middle">0day</text>
+    <text x="20" y="184" font-family="monospace" font-size="6" fill="#2ee7b6" text-anchor="middle">found</text>
+    <text x="88" y="176" font-family="monospace" font-size="6" fill="#ff3e3e" text-anchor="middle">deployed</text>
+    <text x="88" y="184" font-family="monospace" font-size="6" fill="#ff3e3e" text-anchor="middle">globally</text>
+    <text x="155" y="176" font-family="monospace" font-size="6" fill="#9fef00" text-anchor="middle">intel</text>
+    <text x="155" y="184" font-family="monospace" font-size="6" fill="#9fef00" text-anchor="middle">report</text>
+    <rect x="20" y="192" width="68" height="10" rx="3" fill="#ff3e3e" opacity="0.2"/>
+    <text x="54" y="201" font-family="monospace" font-size="6" fill="#ff3e3e" text-anchor="middle">hours</text>
+    <rect x="88" y="192" width="68" height="10" rx="3" fill="#ffaf00" opacity="0.2"/>
+    <text x="122" y="201" font-family="monospace" font-size="6" fill="#ffaf00" text-anchor="middle">days/weeks</text>
+    <line x1="10" y1="215" x2="165" y2="215" stroke="#2ee7b6" stroke-width="0.4" opacity="0.4"/>
+    <text x="88" y="232" font-family="monospace" font-size="7.5" fill="#1a8870" text-anchor="middle">Attackers move</text>
+    <text x="88" y="246" font-family="monospace" font-size="7.5" fill="#1a8870" text-anchor="middle">in hours. Intel</text>
+    <text x="88" y="260" font-family="monospace" font-size="7.5" fill="#1a8870" text-anchor="middle">cycles take days.</text>
+    <text x="88" y="274" font-family="monospace" font-size="7.5" fill="#1a8870" text-anchor="middle">By the time the</text>
+    <text x="88" y="288" font-family="monospace" font-size="7.5" fill="#1a8870" text-anchor="middle">report lands:</text>
+    <text x="88" y="302" font-family="monospace" font-size="7.5" fill="#ff8484" text-anchor="middle">already breached.</text>
+  </g>
+
+  <!-- PANEL 5: DETECTION GAPS -->
+  <g transform="translate(780, 75)">
+    <rect x="0" y="0" width="195" height="340" rx="8" fill="#0a0d14" stroke="#c16cfa" stroke-width="1.5"/>
+    <rect x="0" y="0" width="195" height="35" rx="8" fill="#150520"/>
+    <rect x="0" y="18" width="195" height="17" fill="#150520"/>
+    <text x="98" y="22" font-family="monospace" font-size="8.5" fill="#c16cfa" text-anchor="middle" font-weight="bold" letter-spacing="1">05 · DETECTION GAPS</text>
+    <text x="98" y="80" font-family="monospace" font-size="42" text-anchor="middle" opacity="0.8">👻</text>
+    <text x="98" y="118" font-family="monospace" font-size="20" fill="#c16cfa" text-anchor="middle" font-weight="bold" filter="url(#glow)">200+</text>
+    <text x="98" y="134" font-family="monospace" font-size="8" fill="#9040d0" text-anchor="middle">DAYS AVG DWELL TIME</text>
+    <!-- SIEM rule example showing what it misses -->
+    <rect x="15" y="148" width="165" height="60" rx="4" fill="#0a0a0a" stroke="#c16cfa" stroke-width="0.8"/>
+    <text x="22" y="162" font-family="monospace" font-size="6.5" fill="#666">SIEM rule (misses):</text>
+    <text x="22" y="175" font-family="monospace" font-size="6" fill="#9040d0">IF failed_logins &gt; 10</text>
+    <text x="22" y="186" font-family="monospace" font-size="6" fill="#9040d0">   IN 60 seconds</text>
+    <text x="22" y="197" font-family="monospace" font-size="6" fill="#9040d0">THEN alert_brute_force</text>
+    <text x="22" y="209" font-family="monospace" font-size="6.5" fill="#c16cfa">→ 1 login/10min × 3 days: ✗</text>
+    <line x1="10" y1="225" x2="183" y2="225" stroke="#c16cfa" stroke-width="0.4" opacity="0.4"/>
+    <text x="98" y="242" font-family="monospace" font-size="7.5" fill="#7030a0" text-anchor="middle">APTs use LOLBAS,</text>
+    <text x="98" y="256" font-family="monospace" font-size="7.5" fill="#7030a0" text-anchor="middle">slow-and-low, cloud</text>
+    <text x="98" y="270" font-family="monospace" font-size="7.5" fill="#7030a0" text-anchor="middle">C2. Signature rules</text>
+    <text x="98" y="284" font-family="monospace" font-size="7.5" fill="#7030a0" text-anchor="middle">are blind to</text>
+    <text x="98" y="298" font-family="monospace" font-size="7.5" fill="#7030a0" text-anchor="middle">behavioral patterns.</text>
+    <text x="98" y="312" font-family="monospace" font-size="7.5" fill="#c16cfa" text-anchor="middle">AI solves this.</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <line x1="20" y1="432" x2="980" y2="432" stroke="#9fef00" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="452" font-family="monospace" font-size="9" fill="#2ee7b6" text-anchor="middle">This is why AI-powered Threat Intelligence is no longer optional — it is the only path forward.</text>
+  <text x="500" y="468" font-family="monospace" font-size="8" fill="#444" text-anchor="middle">Black Hat MEA 2025 · Oussama Sahnoun · ThreatLens</text>
+</svg>

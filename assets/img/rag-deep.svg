@@ -1,0 +1,225 @@
+<svg width="1000" height="560" viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/><stop offset="100%" style="stop-color:#050d08"/>
+    </linearGradient>
+    <linearGradient id="flowL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9fef00;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#9fef00;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2ee7b6;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowStrong"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrowG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9fef00"/>
+    </marker>
+    <marker id="arrowC" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2ee7b6"/>
+    </marker>
+    <marker id="arrowR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff3e3e"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="560" fill="url(#bg)" rx="12"/>
+
+  <!-- Background grid -->
+  <g stroke="#9fef00" stroke-width="0.3" opacity="0.07">
+    <line x1="0" y1="56" x2="1000" y2="56"/><line x1="0" y1="112" x2="1000" y2="112"/>
+    <line x1="0" y1="168" x2="1000" y2="168"/><line x1="0" y1="224" x2="1000" y2="224"/>
+    <line x1="0" y1="280" x2="1000" y2="280"/><line x1="0" y1="336" x2="1000" y2="336"/>
+    <line x1="0" y1="392" x2="1000" y2="392"/><line x1="0" y1="448" x2="1000" y2="448"/>
+    <line x1="0" y1="504" x2="1000" y2="504"/>
+    <line x1="100" y1="0" x2="100" y2="560"/><line x1="200" y1="0" x2="200" y2="560"/>
+    <line x1="300" y1="0" x2="300" y2="560"/><line x1="400" y1="0" x2="400" y2="560"/>
+    <line x1="500" y1="0" x2="500" y2="560"/><line x1="600" y1="0" x2="600" y2="560"/>
+    <line x1="700" y1="0" x2="700" y2="560"/><line x1="800" y1="0" x2="800" y2="560"/>
+    <line x1="900" y1="0" x2="900" y2="560"/>
+  </g>
+
+  <!-- Title -->
+  <text x="500" y="35" font-family="'Courier New',monospace" font-size="14" fill="#9fef00" text-anchor="middle" font-weight="bold" letter-spacing="4" filter="url(#glow)">◈  ThreatLens — RAG Pipeline Architecture  ◈</text>
+  <line x1="80" y1="44" x2="920" y2="44" stroke="#9fef00" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- COLUMN 1: INPUT DOCUMENTS -->
+  <!-- ─────────────────────────────────────────── -->
+  <text x="75" y="70" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" opacity="0.7" letter-spacing="2">INGESTION</text>
+
+  <!-- Doc 1: EVTX -->
+  <rect x="10" y="80" width="130" height="52" rx="6" fill="#0a1f10" stroke="#9fef00" stroke-width="1.2"/>
+  <text x="75" y="100" font-family="monospace" font-size="10" fill="#9fef00" text-anchor="middle" font-weight="bold">🪟 Windows EVTX</text>
+  <text x="75" y="115" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">.evtx log files</text>
+  <text x="75" y="127" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle" opacity="0.5">python-evtx parser</text>
+
+  <!-- Doc 2: Linux -->
+  <rect x="10" y="148" width="130" height="52" rx="6" fill="#0a1f10" stroke="#9fef00" stroke-width="1.2"/>
+  <text x="75" y="168" font-family="monospace" font-size="10" fill="#9fef00" text-anchor="middle" font-weight="bold">🐧 Linux Logs</text>
+  <text x="75" y="183" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">auth.log / syslog</text>
+  <text x="75" y="195" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle" opacity="0.5">plain text parser</text>
+
+  <!-- Doc 3: Threat Reports -->
+  <rect x="10" y="216" width="130" height="52" rx="6" fill="#0a1f10" stroke="#2ee7b6" stroke-width="1.2"/>
+  <text x="75" y="236" font-family="monospace" font-size="9" fill="#2ee7b6" text-anchor="middle" font-weight="bold">📄 Threat Reports</text>
+  <text x="75" y="251" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle">PDF · STIX · OSINT</text>
+  <text x="75" y="263" font-family="monospace" font-size="7" fill="#2ee7b6" text-anchor="middle" opacity="0.5">unstructured loader</text>
+
+  <!-- Doc 4: URLs -->
+  <rect x="10" y="284" width="130" height="52" rx="6" fill="#0a1f10" stroke="#2ee7b6" stroke-width="1.2"/>
+  <text x="75" y="304" font-family="monospace" font-size="10" fill="#2ee7b6" text-anchor="middle" font-weight="bold">🌐 Live URLs</text>
+  <text x="75" y="319" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle">web scraper</text>
+  <text x="75" y="331" font-family="monospace" font-size="7" fill="#2ee7b6" text-anchor="middle" opacity="0.5">beautifulsoup4</text>
+
+  <!-- ARROWS to chunker -->
+  <line x1="142" y1="106" x2="196" y2="200" stroke="#9fef00" stroke-width="1.2" marker-end="url(#arrowG)" stroke-dasharray="4,2"/>
+  <line x1="142" y1="174" x2="196" y2="205" stroke="#9fef00" stroke-width="1.2" marker-end="url(#arrowG)" stroke-dasharray="4,2"/>
+  <line x1="142" y1="242" x2="196" y2="210" stroke="#2ee7b6" stroke-width="1.2" marker-end="url(#arrowC)" stroke-dasharray="4,2"/>
+  <line x1="142" y1="310" x2="196" y2="215" stroke="#2ee7b6" stroke-width="1.2" marker-end="url(#arrowC)" stroke-dasharray="4,2"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- COLUMN 2: CHUNKER -->
+  <!-- ─────────────────────────────────────────── -->
+  <text x="240" y="70" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" opacity="0.7" letter-spacing="2">CHUNKING</text>
+  <rect x="188" y="155" width="108" height="110" rx="8" fill="#0d2010" stroke="#9fef00" stroke-width="1.8" filter="url(#glow)"/>
+  <text x="242" y="180" font-family="monospace" font-size="11" fill="#9fef00" text-anchor="middle" font-weight="bold">✂ CHUNKER</text>
+  <line x1="195" y1="188" x2="289" y2="188" stroke="#9fef00" stroke-width="0.5" opacity="0.4"/>
+  <text x="242" y="203" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">300 chars / chunk</text>
+  <text x="242" y="216" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">50-token overlap</text>
+  <text x="242" y="232" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle">semantic split</text>
+  <text x="242" y="250" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle" opacity="0.6">phidata framework</text>
+  <!-- Chunk mini visualization -->
+  <rect x="198" y="258" width="25" height="12" rx="2" fill="#1a3020" stroke="#9fef00" stroke-width="0.7"/>
+  <rect x="226" y="258" width="25" height="12" rx="2" fill="#1a3020" stroke="#9fef00" stroke-width="0.7"/>
+  <rect x="254" y="258" width="25" height="12" rx="2" fill="#1a3020" stroke="#2ee7b6" stroke-width="0.7"/>
+  <!-- overlap indicator -->
+  <rect x="221" y="260" width="10" height="8" rx="1" fill="#9fef00" opacity="0.3"/>
+  <rect x="249" y="260" width="10" height="8" rx="1" fill="#9fef00" opacity="0.3"/>
+
+  <!-- ARROW to embeddings -->
+  <line x1="298" y1="210" x2="354" y2="210" stroke="#9fef00" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- COLUMN 3: EMBEDDING MODEL -->
+  <!-- ─────────────────────────────────────────── -->
+  <text x="410" y="70" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" opacity="0.7" letter-spacing="2">EMBEDDING</text>
+  <rect x="354" y="140" width="120" height="140" rx="8" fill="#0d1f10" stroke="#2ee7b6" stroke-width="1.8" filter="url(#glow)"/>
+  <text x="414" y="165" font-family="monospace" font-size="10" fill="#2ee7b6" text-anchor="middle" font-weight="bold">🦙 OLLAMA</text>
+  <text x="414" y="180" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle">nomic-embed-text</text>
+  <line x1="361" y1="188" x2="467" y2="188" stroke="#2ee7b6" stroke-width="0.5" opacity="0.4"/>
+  <text x="414" y="203" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">768 dimensions</text>
+  <text x="414" y="218" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle">100% LOCAL</text>
+  <text x="414" y="233" font-family="monospace" font-size="7" fill="#2ee7b6" text-anchor="middle">no cloud · private</text>
+  <!-- Vector visualization -->
+  <text x="362" y="255" font-family="monospace" font-size="7" fill="#9fef00" opacity="0.8">[0.12, 0.87, -0.34,</text>
+  <text x="362" y="267" font-family="monospace" font-size="7" fill="#9fef00" opacity="0.8"> 0.55, -0.21, ...]</text>
+
+  <!-- ARROW to vector DB -->
+  <line x1="476" y1="210" x2="532" y2="210" stroke="#2ee7b6" stroke-width="1.5" marker-end="url(#arrowC)"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- COLUMN 4: VECTOR DATABASE -->
+  <!-- ─────────────────────────────────────────── -->
+  <text x="590" y="70" font-family="monospace" font-size="9" fill="#ffaf00" text-anchor="middle" opacity="0.7" letter-spacing="2">VECTOR DB</text>
+  <rect x="530" y="120" width="130" height="180" rx="8" fill="#1a1505" stroke="#ffaf00" stroke-width="1.8" filter="url(#glow)"/>
+  <text x="595" y="148" font-family="monospace" font-size="11" fill="#ffaf00" text-anchor="middle" font-weight="bold">🗄 pgvector</text>
+  <text x="595" y="163" font-family="monospace" font-size="8" fill="#cc8800" text-anchor="middle">PostgreSQL</text>
+  <line x1="537" y1="170" x2="653" y2="170" stroke="#ffaf00" stroke-width="0.5" opacity="0.4"/>
+  <text x="595" y="185" font-family="monospace" font-size="8" fill="#ffaf00" text-anchor="middle">ANN index</text>
+  <text x="595" y="199" font-family="monospace" font-size="8" fill="#cc8800" text-anchor="middle">HNSW algorithm</text>
+  <text x="595" y="213" font-family="monospace" font-size="8" fill="#ffaf00" text-anchor="middle">cosine similarity</text>
+  <text x="595" y="227" font-family="monospace" font-size="7" fill="#cc8800" text-anchor="middle">Docker container</text>
+  <!-- Cylinder shape for DB -->
+  <ellipse cx="595" cy="248" rx="40" ry="10" fill="#1a1505" stroke="#ffaf00" stroke-width="1"/>
+  <rect x="555" y="248" width="80" height="28" fill="#1a1505"/>
+  <ellipse cx="595" cy="276" rx="40" ry="10" fill="#1a1505" stroke="#ffaf00" stroke-width="1"/>
+  <line x1="555" y1="248" x2="555" y2="276" stroke="#ffaf00" stroke-width="1"/>
+  <line x1="635" y1="248" x2="635" y2="276" stroke="#ffaf00" stroke-width="1"/>
+  <text x="595" y="266" font-family="monospace" font-size="7" fill="#ffaf00" text-anchor="middle">847K vectors</text>
+  <text x="595" y="285" font-family="monospace" font-size="7" fill="#cc8800" text-anchor="middle">port :5532</text>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- BOTTOM PATH: QUERY FLOW (comes from analyst) -->
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Analyst query box -->
+  <text x="75" y="390" font-family="monospace" font-size="9" fill="#2ee7b6" text-anchor="middle" opacity="0.7" letter-spacing="2">QUERY PATH</text>
+  <rect x="10" y="400" width="130" height="60" rx="6" fill="#051520" stroke="#2ee7b6" stroke-width="1.5"/>
+  <text x="75" y="423" font-family="monospace" font-size="10" fill="#2ee7b6" text-anchor="middle" font-weight="bold">💬 Analyst</text>
+  <text x="75" y="438" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle">"Are there signs of</text>
+  <text x="75" y="450" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle">lateral movement?"</text>
+
+  <!-- Query goes to same embedder -->
+  <path d="M 142 430 Q 242 430 242 275" stroke="#2ee7b6" stroke-width="1.2" fill="none" marker-end="url(#arrowC)" stroke-dasharray="5,3"/>
+  <text x="175" y="425" font-family="monospace" font-size="7" fill="#2ee7b6">embed query</text>
+
+  <!-- Query embedding goes to Vector DB -->
+  <path d="M 414 280 Q 414 380 530 380 Q 595 380 595 302" stroke="#2ee7b6" stroke-width="1.2" fill="none" marker-end="url(#arrowC)" stroke-dasharray="5,3"/>
+  <text x="480" y="397" font-family="monospace" font-size="7" fill="#2ee7b6">query vector → ANN search</text>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- COLUMN 5: LLM GENERATION -->
+  <!-- ─────────────────────────────────────────── -->
+  <text x="775" y="70" font-family="monospace" font-size="9" fill="#ff3e3e" text-anchor="middle" opacity="0.7" letter-spacing="2">GENERATION</text>
+
+  <!-- Retrieved chunks arrow -->
+  <line x1="662" y1="210" x2="718" y2="210" stroke="#ffaf00" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <text x="690" y="203" font-family="monospace" font-size="7" fill="#ffaf00">top-K chunks</text>
+
+  <!-- LLM Box -->
+  <rect x="718" y="120" width="150" height="200" rx="8" fill="#1a0808" stroke="#ff3e3e" stroke-width="2" filter="url(#glow)"/>
+  <text x="793" y="148" font-family="monospace" font-size="12" fill="#ff3e3e" text-anchor="middle" font-weight="bold">⚡ GROQ</text>
+  <text x="793" y="164" font-family="monospace" font-size="8" fill="#cc2222" text-anchor="middle">LLaMA 3.3 70B</text>
+  <text x="793" y="178" font-family="monospace" font-size="7" fill="#993333" text-anchor="middle">free API · 500 tok/s</text>
+  <line x1="725" y1="185" x2="861" y2="185" stroke="#ff3e3e" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Context window visualization inside LLM box -->
+  <text x="728" y="200" font-family="monospace" font-size="7" fill="#ff8484">Context Window:</text>
+  <rect x="728" y="205" width="130" height="10" rx="2" fill="#1a1010"/>
+  <rect x="728" y="205" width="85" height="10" rx="2" fill="#ff3e3e" opacity="0.4"/>
+  <text x="728" y="213" font-family="monospace" font-size="6" fill="#ff8484">Retrieved chunks (3.2K tok)</text>
+  <rect x="728" y="220" width="130" height="10" rx="2" fill="#1a1010"/>
+  <rect x="728" y="220" width="40" height="10" rx="2" fill="#9fef00" opacity="0.4"/>
+  <text x="728" y="228" font-family="monospace" font-size="6" fill="#9fef00">Query (28 tok)</text>
+  <rect x="728" y="235" width="130" height="10" rx="2" fill="#1a1010"/>
+  <rect x="728" y="235" width="55" height="10" rx="2" fill="#2ee7b6" opacity="0.4"/>
+  <text x="728" y="243" font-family="monospace" font-size="6" fill="#2ee7b6">System prompt (512 tok)</text>
+
+  <!-- Attention visualization -->
+  <text x="728" y="262" font-family="monospace" font-size="7" fill="#ff8484">Self-Attention heads:</text>
+  <g opacity="0.7">
+    <rect x="728" y="266" width="12" height="12" rx="2" fill="#ff3e3e" opacity="0.6"/>
+    <rect x="744" y="266" width="12" height="12" rx="2" fill="#9fef00" opacity="0.6"/>
+    <rect x="760" y="266" width="12" height="12" rx="2" fill="#2ee7b6" opacity="0.6"/>
+    <rect x="776" y="266" width="12" height="12" rx="2" fill="#ffaf00" opacity="0.6"/>
+    <rect x="792" y="266" width="12" height="12" rx="2" fill="#ff3e3e" opacity="0.4"/>
+    <rect x="808" y="266" width="12" height="12" rx="2" fill="#9fef00" opacity="0.4"/>
+    <rect x="824" y="266" width="12" height="12" rx="2" fill="#2ee7b6" opacity="0.4"/>
+    <rect x="840" y="266" width="12" height="12" rx="2" fill="#ffaf00" opacity="0.4"/>
+  </g>
+  <text x="728" y="293" font-family="monospace" font-size="7" fill="#ff8484">Temp: 0.1 · Top-p: 0.9</text>
+  <text x="728" y="308" font-family="monospace" font-size="7" fill="#9fef00">→ Generating answer...</text>
+
+  <!-- Output arrow -->
+  <line x1="870" y1="220" x2="930" y2="220" stroke="#9fef00" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- COLUMN 6: EXPERT ANSWER OUTPUT -->
+  <!-- ─────────────────────────────────────────── -->
+  <rect x="930" y="130" width="60" height="180" rx="6" fill="#0a1f10" stroke="#9fef00" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="960" y="160" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle" font-weight="bold">🎯</text>
+  <text x="960" y="175" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle">EXPERT</text>
+  <text x="960" y="188" font-family="monospace" font-size="7" fill="#9fef00" text-anchor="middle">ANSWER</text>
+  <line x1="937" y1="196" x2="983" y2="196" stroke="#9fef00" stroke-width="0.5" opacity="0.4"/>
+  <text x="960" y="210" font-family="monospace" font-size="6" fill="#2ee7b6" text-anchor="middle">ATT&amp;CK</text>
+  <text x="960" y="222" font-family="monospace" font-size="6" fill="#2ee7b6" text-anchor="middle">mapping</text>
+  <text x="960" y="240" font-family="monospace" font-size="6" fill="#9fef00" text-anchor="middle">IOC list</text>
+  <text x="960" y="254" font-family="monospace" font-size="6" fill="#9fef00" text-anchor="middle">severity</text>
+  <text x="960" y="268" font-family="monospace" font-size="6" fill="#2ee7b6" text-anchor="middle">timeline</text>
+  <text x="960" y="286" font-family="monospace" font-size="6" fill="#9fef00" text-anchor="middle">actions</text>
+
+  <!-- Footer -->
+  <line x1="10" y1="490" x2="990" y2="490" stroke="#9fef00" stroke-width="0.5" opacity="0.3"/>
+  <text x="500" y="510" font-family="monospace" font-size="9" fill="#2ee7b6" text-anchor="middle">ThreatLens · github.com/sahnoun11/ThreatLens · Black Hat MEA 2025 — Oussama Sahnoun</text>
+  <text x="500" y="530" font-family="monospace" font-size="8" fill="#444" text-anchor="middle">Stack: Streamlit · Groq LLaMA 3.3 · Ollama nomic-embed-text · PostgreSQL pgvector · phidata · python-evtx</text>
+  <text x="500" y="548" font-family="monospace" font-size="8" fill="#555" text-anchor="middle">100% free · 100% local embeddings · no data leaves your machine</text>
+
+</svg>

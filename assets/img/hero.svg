@@ -1,0 +1,363 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- HTB exact color palette -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000"/>
+      <stop offset="40%" style="stop-color:#0a0e1a"/>
+      <stop offset="100%" style="stop-color:#0d1f12"/>
+    </linearGradient>
+    <linearGradient id="cityGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9fef00;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#9fef00;stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="figureGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2332"/>
+      <stop offset="100%" style="stop-color:#0d1520"/>
+    </linearGradient>
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9fef00;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:#9fef00;stop-opacity:1"/>
+      <stop offset="70%" style="stop-color:#2ee7b6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2ee7b6;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="scanline" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9fef00;stop-opacity:0.03"/>
+      <stop offset="50%" style="stop-color:#9fef00;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#9fef00;stop-opacity:0.03"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cityBlur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <clipPath id="mainClip">
+      <rect width="1200" height="630"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#mainClip)">
+
+  <!-- ── SKY / BACKGROUND ── -->
+  <rect width="1200" height="630" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <g fill="white" opacity="0.6">
+    <circle cx="45" cy="22" r="0.8"/><circle cx="112" cy="45" r="0.5"/>
+    <circle cx="198" cy="18" r="1"/><circle cx="267" cy="38" r="0.7"/>
+    <circle cx="380" cy="12" r="0.6"/><circle cx="445" cy="55" r="0.8"/>
+    <circle cx="520" cy="30" r="0.5"/><circle cx="610" cy="8" r="1.1"/>
+    <circle cx="700" cy="42" r="0.6"/><circle cx="780" cy="20" r="0.8"/>
+    <circle cx="850" cy="50" r="0.5"/><circle cx="930" cy="15" r="0.9"/>
+    <circle cx="1010" cy="35" r="0.7"/><circle cx="1090" cy="25" r="0.5"/>
+    <circle cx="1155" cy="48" r="1"/><circle cx="60" cy="70" r="0.5"/>
+    <circle cx="170" cy="85" r="0.7"/><circle cx="340" cy="68" r="0.5"/>
+    <circle cx="490" cy="90" r="0.6"/><circle cx="650" cy="72" r="0.8"/>
+    <circle cx="820" cy="88" r="0.5"/><circle cx="990" cy="60" r="0.7"/>
+    <circle cx="1120" cy="80" r="0.6"/>
+  </g>
+
+  <!-- ── DISTANT CITY SKYLINE (far background, blurred) ── -->
+  <g filter="url(#cityBlur)" opacity="0.25">
+    <!-- Far city buildings silhouettes -->
+    <rect x="0" y="320" width="18" height="120" fill="#9fef00"/>
+    <rect x="22" y="295" width="12" height="145" fill="#9fef00"/>
+    <rect x="38" y="340" width="25" height="100" fill="#2ee7b6"/>
+    <rect x="67" y="280" width="15" height="160" fill="#9fef00"/>
+    <rect x="86" y="305" width="30" height="135" fill="#9fef00"/>
+    <rect x="120" y="260" width="20" height="180" fill="#2ee7b6"/>
+    <rect x="145" y="290" width="40" height="150" fill="#9fef00"/>
+    <rect x="190" y="275" width="15" height="165" fill="#9fef00"/>
+    <rect x="210" y="310" width="35" height="130" fill="#2ee7b6"/>
+    <rect x="250" y="255" width="22" height="185" fill="#9fef00"/>
+    <rect x="277" y="285" width="50" height="155" fill="#9fef00"/>
+    <rect x="332" y="270" width="18" height="170" fill="#2ee7b6"/>
+    <rect x="355" y="300" width="28" height="140" fill="#9fef00"/>
+    <!-- Right side -->
+    <rect x="820" y="270" width="28" height="170" fill="#9fef00"/>
+    <rect x="853" y="285" width="50" height="155" fill="#2ee7b6"/>
+    <rect x="908" y="255" width="22" height="185" fill="#9fef00"/>
+    <rect x="935" y="310" width="35" height="130" fill="#9fef00"/>
+    <rect x="975" y="275" width="15" height="165" fill="#2ee7b6"/>
+    <rect x="995" y="290" width="40" height="150" fill="#9fef00"/>
+    <rect x="1040" y="260" width="20" height="180" fill="#9fef00"/>
+    <rect x="1065" y="305" width="30" height="135" fill="#2ee7b6"/>
+    <rect x="1100" y="280" width="15" height="160" fill="#9fef00"/>
+    <rect x="1120" y="340" width="25" height="100" fill="#9fef00"/>
+    <rect x="1150" y="295" width="12" height="145" fill="#2ee7b6"/>
+    <rect x="1166" y="320" width="18" height="120" fill="#9fef00"/>
+    <!-- City light glow at base -->
+    <rect x="0" y="430" width="1200" height="50" fill="url(#cityGlow)"/>
+  </g>
+
+  <!-- ── MIDDLE CITY (sharper) ── -->
+  <g opacity="0.55">
+    <!-- Left cluster -->
+    <rect x="0" y="360" width="40" height="270" fill="#0a1518"/>
+    <rect x="44" y="330" width="55" height="300" fill="#0c1a20"/>
+    <rect x="103" y="310" width="35" height="320" fill="#0a1518"/>
+    <rect x="142" y="345" width="60" height="285" fill="#0c1a20"/>
+    <rect x="206" y="295" width="45" height="335" fill="#0a1518"/>
+    <rect x="255" y="325" width="70" height="305" fill="#0c1a20"/>
+    <rect x="329" y="355" width="30" height="275" fill="#0a1518"/>
+    <rect x="363" y="315" width="50" height="315" fill="#0c1a20"/>
+    <!-- Right cluster -->
+    <rect x="787" y="315" width="50" height="315" fill="#0c1a20"/>
+    <rect x="841" y="355" width="30" height="275" fill="#0a1518"/>
+    <rect x="875" y="325" width="70" height="305" fill="#0c1a20"/>
+    <rect x="949" y="295" width="45" height="335" fill="#0a1518"/>
+    <rect x="998" y="345" width="60" height="285" fill="#0c1a20"/>
+    <rect x="1062" y="310" width="35" height="320" fill="#0a1518"/>
+    <rect x="1101" y="330" width="55" height="300" fill="#0c1a20"/>
+    <rect x="1160" y="360" width="40" height="270" fill="#0a1518"/>
+    <!-- HTB green window lights on buildings -->
+    <g fill="#9fef00" opacity="0.7">
+      <rect x="10" y="380" width="5" height="4"/><rect x="20" y="380" width="5" height="4"/>
+      <rect x="10" y="392" width="5" height="4"/><rect x="20" y="400" width="5" height="4"/>
+      <rect x="55" y="345" width="5" height="4"/><rect x="65" y="360" width="5" height="4"/>
+      <rect x="75" y="345" width="5" height="4"/><rect x="55" y="372" width="5" height="4"/>
+      <rect x="112" y="325" width="5" height="4"/><rect x="122" y="340" width="5" height="4"/>
+      <rect x="155" y="360" width="5" height="4"/><rect x="170" y="375" width="5" height="4"/>
+      <rect x="215" y="310" width="5" height="4"/><rect x="228" y="325" width="5" height="4"/>
+      <rect x="215" y="340" width="5" height="4"/><rect x="270" y="340" width="5" height="4"/>
+      <rect x="283" y="355" width="5" height="4"/><rect x="296" y="340" width="5" height="4"/>
+    </g>
+    <!-- Cyan window lights -->
+    <g fill="#2ee7b6" opacity="0.6">
+      <rect x="370" y="330" width="5" height="4"/><rect x="383" y="345" width="5" height="4"/>
+      <rect x="370" y="357" width="5" height="4"/><rect x="383" y="330" width="5" height="4"/>
+      <rect x="900" y="340" width="5" height="4"/><rect x="913" y="355" width="5" height="4"/>
+      <rect x="1010" y="360" width="5" height="4"/><rect x="1023" y="375" width="5" height="4"/>
+      <rect x="1070" y="325" width="5" height="4"/><rect x="1083" y="340" width="5" height="4"/>
+      <rect x="1110" y="345" width="5" height="4"/><rect x="1123" y="360" width="5" height="4"/>
+      <rect x="1165" y="375" width="5" height="4"/><rect x="1178" y="390" width="5" height="4"/>
+    </g>
+  </g>
+
+  <!-- Rain streaks -->
+  <g stroke="#2ee7b6" stroke-width="0.3" opacity="0.12">
+    <line x1="50" y1="0" x2="40" y2="630"/><line x1="130" y1="0" x2="120" y2="630"/>
+    <line x1="210" y1="0" x2="200" y2="630"/><line x1="290" y1="0" x2="280" y2="630"/>
+    <line x1="370" y1="0" x2="360" y2="630"/><line x1="450" y1="0" x2="440" y2="630"/>
+    <line x1="530" y1="0" x2="520" y2="630"/><line x1="610" y1="0" x2="600" y2="630"/>
+    <line x1="690" y1="0" x2="680" y2="630"/><line x1="770" y1="0" x2="760" y2="630"/>
+    <line x1="850" y1="0" x2="840" y2="630"/><line x1="930" y1="0" x2="920" y2="630"/>
+    <line x1="1010" y1="0" x2="1000" y2="630"/><line x1="1090" y1="0" x2="1080" y2="630"/>
+    <line x1="1170" y1="0" x2="1160" y2="630"/>
+    <line x1="90" y1="0" x2="80" y2="630" opacity="0.5"/><line x1="170" y1="0" x2="160" y2="630" opacity="0.5"/>
+    <line x1="250" y1="0" x2="240" y2="630" opacity="0.5"/><line x1="330" y1="0" x2="320" y2="630" opacity="0.5"/>
+  </g>
+
+  <!-- ── GROUND / FLOOR (puddle reflection effect) ── -->
+  <rect x="0" y="530" width="1200" height="100" fill="#050d08" opacity="0.95"/>
+  <!-- Reflected glow on wet ground -->
+  <ellipse cx="600" cy="555" rx="400" ry="30" fill="#9fef00" opacity="0.04"/>
+  <!-- Ground grid perspective lines -->
+  <g stroke="#9fef00" stroke-width="0.5" opacity="0.2">
+    <line x1="0" y1="630" x2="600" y2="535"/><line x1="1200" y1="630" x2="600" y2="535"/>
+    <line x1="100" y1="630" x2="600" y2="535"/><line x1="300" y1="630" x2="600" y2="535"/>
+    <line x1="500" y1="630" x2="600" y2="535"/><line x1="700" y1="630" x2="600" y2="535"/>
+    <line x1="900" y1="630" x2="600" y2="535"/><line x1="1100" y1="630" x2="600" y2="535"/>
+  </g>
+  <line x1="0" y1="560" x2="1200" y2="560" stroke="#9fef00" stroke-width="0.5" opacity="0.15"/>
+  <line x1="0" y1="580" x2="1200" y2="580" stroke="#9fef00" stroke-width="0.5" opacity="0.10"/>
+  <line x1="0" y1="600" x2="1200" y2="600" stroke="#9fef00" stroke-width="0.5" opacity="0.07"/>
+
+  <!-- ── ANIME FIGURE — Ghost in the Shell inspired cybersecurity analyst ── -->
+  <!-- Standing on a rooftop ledge, hooded, looking at holographic screens -->
+  <!-- Body / coat -->
+  <g transform="translate(490, 200)">
+    <!-- Long coat / cloak flowing left in wind -->
+    <path d="M60,80 Q40,120 20,200 Q10,260 25,320 Q35,360 55,380 L75,380 Q70,340 65,290 Q60,230 75,180 Q85,140 80,80 Z" fill="#0a1520" stroke="#9fef00" stroke-width="0.8" opacity="0.9"/>
+    <!-- Coat right side -->
+    <path d="M80,80 Q95,140 95,200 Q95,250 90,310 Q88,350 85,380 L105,380 Q115,340 118,300 Q122,250 115,200 Q105,150 100,80 Z" fill="#0d1a28" stroke="#9fef00" stroke-width="0.8" opacity="0.9"/>
+    <!-- Hood -->
+    <ellipse cx="80" cy="65" rx="32" ry="28" fill="#0a1520" stroke="#2ee7b6" stroke-width="1"/>
+    <!-- Face (partially visible under hood — anime style) -->
+    <ellipse cx="80" cy="72" rx="20" ry="18" fill="#1a2535"/>
+    <!-- Glowing eye visor / augmented eye — HTB green -->
+    <rect x="62" y="67" width="36" height="6" rx="3" fill="#9fef00" opacity="0.9" filter="url(#glow)"/>
+    <rect x="64" y="68" width="32" height="4" rx="2" fill="#9fef00" opacity="0.4"/>
+    <!-- Neural interface port on temple -->
+    <circle cx="60" cy="70" r="3" fill="#2ee7b6" stroke="#9fef00" stroke-width="0.5"/>
+    <line x1="57" y1="70" x2="45" y2="72" stroke="#2ee7b6" stroke-width="0.8" opacity="0.7"/>
+    <!-- Neck / collar detail -->
+    <rect x="70" y="88" width="20" height="8" rx="2" fill="#0f1e30" stroke="#2ee7b6" stroke-width="0.5"/>
+    <!-- Left arm extended toward holographic screen -->
+    <path d="M55,130 Q30,150 15,175 Q5,195 10,215 L20,215 Q20,200 28,182 Q38,162 55,145 Z" fill="#0a1520" stroke="#9fef00" stroke-width="0.7"/>
+    <!-- Hand / fingers -->
+    <path d="M10,215 Q5,222 8,228 L14,226 Q12,222 14,218 Z" fill="#1a2535"/>
+    <path d="M14,226 Q10,233 13,238 L18,236 Q16,232 18,228 Z" fill="#1a2535"/>
+    <path d="M18,236 Q16,243 19,246 L23,244 Q22,240 23,237 Z" fill="#1a2535"/>
+    <!-- Cybernetic arm detail -->
+    <rect x="22" y="160" width="8" height="3" rx="1" fill="#9fef00" opacity="0.6"/>
+    <rect x="22" y="168" width="8" height="3" rx="1" fill="#2ee7b6" opacity="0.6"/>
+    <!-- Right arm down by side, holding device -->
+    <path d="M100,130 Q118,155 120,185 Q122,205 118,220 L110,220 Q112,205 110,185 Q108,160 95,138 Z" fill="#0a1520" stroke="#9fef00" stroke-width="0.7"/>
+    <!-- Device/tablet in right hand -->
+    <rect x="108" y="218" width="22" height="30" rx="2" fill="#0f1e30" stroke="#9fef00" stroke-width="1"/>
+    <rect x="110" y="220" width="18" height="26" rx="1" fill="#0a2a18"/>
+    <!-- Screen content on device -->
+    <rect x="111" y="221" width="16" height="2" fill="#9fef00" opacity="0.8"/>
+    <rect x="111" y="225" width="10" height="1" fill="#2ee7b6" opacity="0.6"/>
+    <rect x="111" y="228" width="14" height="1" fill="#2ee7b6" opacity="0.6"/>
+    <rect x="111" y="231" width="8" height="1" fill="#9fef00" opacity="0.4"/>
+    <!-- Boots / lower body visible -->
+    <rect x="65" y="375" width="14" height="40" rx="2" fill="#0a1218" stroke="#9fef00" stroke-width="0.5"/>
+    <rect x="81" y="375" width="14" height="40" rx="2" fill="#0a1218" stroke="#9fef00" stroke-width="0.5"/>
+    <!-- Boot glowing sole -->
+    <rect x="64" y="413" width="16" height="3" rx="1" fill="#9fef00" opacity="0.5" filter="url(#glow)"/>
+    <rect x="80" y="413" width="16" height="3" rx="1" fill="#2ee7b6" opacity="0.5" filter="url(#glow)"/>
+  </g>
+
+  <!-- ── HOLOGRAPHIC SCREENS floating around figure ── -->
+  <!-- Main screen — large, left of figure -->
+  <g transform="translate(140, 200)" opacity="0.92">
+    <rect x="0" y="0" width="280" height="175" rx="4" fill="#020d08" stroke="#9fef00" stroke-width="1.5" filter="url(#glow)"/>
+    <rect x="0" y="0" width="280" height="175" rx="4" fill="#9fef00" opacity="0.03"/>
+    <!-- Screen header -->
+    <rect x="0" y="0" width="280" height="20" rx="4" fill="#0a1f10"/>
+    <circle cx="12" cy="10" r="4" fill="#ff3e3e" opacity="0.8"/>
+    <circle cx="24" cy="10" r="4" fill="#ffaf00" opacity="0.8"/>
+    <circle cx="36" cy="10" r="4" fill="#9fef00" opacity="0.8"/>
+    <text x="50" y="14" font-family="monospace" font-size="8" fill="#9fef00" opacity="0.7">THREAT_HUNTER@VERMEG:~/blackhat-mea$</text>
+    <!-- Terminal content -->
+    <text x="8" y="36" font-family="monospace" font-size="7" fill="#9fef00">$ python3 threatlens.py --mode hunt --target evtx</text>
+    <text x="8" y="48" font-family="monospace" font-size="7" fill="#2ee7b6">[+] Initializing RAG pipeline...</text>
+    <text x="8" y="60" font-family="monospace" font-size="7" fill="#2ee7b6">[+] Loading nomic-embed-text (local)...</text>
+    <text x="8" y="72" font-family="monospace" font-size="7" fill="#9fef00">[+] Vector DB connected — pgvector</text>
+    <text x="8" y="84" font-family="monospace" font-size="7" fill="#9fef00">[+] Groq LLaMA 3.3 70B — ready</text>
+    <text x="8" y="96" font-family="monospace" font-size="7" fill="#2ee7b6">[*] Ingesting 847 log entries...</text>
+    <text x="8" y="108" font-family="monospace" font-size="7" fill="#ff3e3e">[!] ALERT: Lateral movement detected</text>
+    <text x="8" y="120" font-family="monospace" font-size="7" fill="#ff3e3e">    EventID 4625 → 4688 → 4720</text>
+    <text x="8" y="132" font-family="monospace" font-size="7" fill="#9fef00">    ATT&amp;CK: T1021.003 / T1136.001</text>
+    <text x="8" y="144" font-family="monospace" font-size="7" fill="#2ee7b6">[*] Confidence: 0.94 | Severity: CRITICAL</text>
+    <text x="8" y="156" font-family="monospace" font-size="7" fill="#9fef00">$ <tspan fill="#9fef00" opacity="0.8">_</tspan></text>
+    <!-- Blinking cursor -->
+    <rect x="14" y="149" width="5" height="8" fill="#9fef00" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0;0.9" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Second screen — network graph / threat map top right -->
+  <g transform="translate(810, 130)" opacity="0.88">
+    <rect x="0" y="0" width="230" height="160" rx="4" fill="#020d08" stroke="#2ee7b6" stroke-width="1.2" filter="url(#glow)"/>
+    <rect x="0" y="0" width="230" height="14" rx="4" fill="#051a1f"/>
+    <text x="8" y="10" font-family="monospace" font-size="7" fill="#2ee7b6">◈ THREAT MAP — BLACK HAT MEA 2025</text>
+    <!-- Network node graph -->
+    <!-- Central node (attacker) -->
+    <circle cx="115" cy="87" r="8" fill="#ff3e3e" opacity="0.9" filter="url(#glow)"/>
+    <text x="115" y="90" font-family="monospace" font-size="5" fill="white" text-anchor="middle">APT</text>
+    <!-- Connected victim nodes -->
+    <circle cx="55" cy="50" r="5" fill="#9fef00" opacity="0.7"/>
+    <circle cx="175" cy="45" r="5" fill="#9fef00" opacity="0.7"/>
+    <circle cx="40" cy="115" r="5" fill="#ffaf00" opacity="0.8"/>
+    <circle cx="190" cy="125" r="5" fill="#9fef00" opacity="0.7"/>
+    <circle cx="115" cy="145" r="5" fill="#ff3e3e" opacity="0.9"/>
+    <!-- Connection lines -->
+    <line x1="115" y1="87" x2="55" y2="50" stroke="#ff3e3e" stroke-width="1" opacity="0.6" stroke-dasharray="3,2"/>
+    <line x1="115" y1="87" x2="175" y2="45" stroke="#ff3e3e" stroke-width="1" opacity="0.6" stroke-dasharray="3,2"/>
+    <line x1="115" y1="87" x2="40" y2="115" stroke="#ffaf00" stroke-width="1.5" opacity="0.7"/>
+    <line x1="115" y1="87" x2="190" y2="125" stroke="#ff3e3e" stroke-width="1" opacity="0.6" stroke-dasharray="3,2"/>
+    <line x1="115" y1="87" x2="115" y2="145" stroke="#ff3e3e" stroke-width="2" opacity="0.8"/>
+    <!-- Labels -->
+    <text x="55" y="42" font-family="monospace" font-size="5" fill="#9fef00" text-anchor="middle">C2</text>
+    <text x="175" y="38" font-family="monospace" font-size="5" fill="#9fef00" text-anchor="middle">VPN</text>
+    <text x="32" y="125" font-family="monospace" font-size="5" fill="#ffaf00">PIVOT</text>
+    <text x="196" y="135" font-family="monospace" font-size="5" fill="#9fef00">EXFIL</text>
+    <text x="115" y="154" font-family="monospace" font-size="5" fill="#ff3e3e" text-anchor="middle">TARGET</text>
+    <!-- Status bar -->
+    <text x="8" y="153" font-family="monospace" font-size="6" fill="#2ee7b6">QakBot campaign · Dwell: 47d</text>
+  </g>
+
+  <!-- Third screen — small, right below network graph -->
+  <g transform="translate(830, 320)" opacity="0.85">
+    <rect x="0" y="0" width="200" height="100" rx="4" fill="#020d08" stroke="#9fef00" stroke-width="1" filter="url(#glow)"/>
+    <rect x="0" y="0" width="200" height="14" rx="4" fill="#0a1f10"/>
+    <text x="8" y="10" font-family="monospace" font-size="7" fill="#9fef00">◈ RAG RETRIEVAL</text>
+    <!-- Mini RAG diagram -->
+    <text x="8" y="28" font-family="monospace" font-size="6" fill="#2ee7b6">Query: "lateral movement"</text>
+    <text x="8" y="40" font-family="monospace" font-size="6" fill="#9fef00">↓ embed → cosine search</text>
+    <text x="8" y="52" font-family="monospace" font-size="6" fill="#2ee7b6">chunk#0847 sim=0.94 ✓</text>
+    <text x="8" y="62" font-family="monospace" font-size="6" fill="#2ee7b6">chunk#0231 sim=0.91 ✓</text>
+    <text x="8" y="72" font-family="monospace" font-size="6" fill="#2ee7b6">chunk#1203 sim=0.87 ✓</text>
+    <text x="8" y="84" font-family="monospace" font-size="6" fill="#9fef00">→ LLaMA 3.3 generating...</text>
+    <rect x="8" y="88" width="80" height="4" rx="2" fill="#0a2a18"/>
+    <rect x="8" y="88" width="65" height="4" rx="2" fill="#9fef00" opacity="0.7">
+      <animate attributeName="width" values="10;80;10" dur="2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ── CENTRAL HOLOGRAPHIC DISPLAY — main title area ── -->
+  <!-- Large holographic projection above / in front of figure -->
+  <g transform="translate(390, 80)" filter="url(#strongGlow)">
+    <line x1="210" y1="0" x2="210" y2="120" stroke="#9fef00" stroke-width="0.5" opacity="0.3" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Scanlines overlay (anime CRT aesthetic) -->
+  <g opacity="0.04">
+    <rect x="0" y="0" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="6" width="1200" height="1" fill="#9fef00"/>
+    <rect x="0" y="12" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="18" width="1200" height="1" fill="#9fef00"/>
+    <rect x="0" y="24" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="30" width="1200" height="1" fill="#9fef00"/>
+    <rect x="0" y="36" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="42" width="1200" height="1" fill="#9fef00"/>
+    <rect x="0" y="48" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="54" width="1200" height="1" fill="#9fef00"/>
+    <rect x="0" y="60" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="66" width="1200" height="1" fill="#9fef00"/>
+    <rect x="0" y="72" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="78" width="1200" height="1" fill="#9fef00"/>
+    <rect x="0" y="84" width="1200" height="2" fill="#9fef00"/>
+    <rect x="0" y="90" width="1200" height="1" fill="#9fef00"/>
+  </g>
+
+  <!-- ── TITLE TEXT (centered, floating holographic style) ── -->
+  <!-- Glow background for text -->
+  <ellipse cx="600" cy="490" rx="420" ry="60" fill="#9fef00" opacity="0.03"/>
+
+  <!-- BLACK HAT MEA badge top left -->
+  <g transform="translate(20, 18)">
+    <rect x="0" y="0" width="220" height="38" rx="3" fill="#0d1a10" stroke="#9fef00" stroke-width="1.2"/>
+    <rect x="0" y="0" width="220" height="38" rx="3" fill="#9fef00" opacity="0.04"/>
+    <text x="10" y="14" font-family="'Courier New',monospace" font-size="9" fill="#9fef00" font-weight="bold" letter-spacing="2">◈ BLACK HAT MEA 2025</text>
+    <text x="10" y="28" font-family="'Courier New',monospace" font-size="8" fill="#2ee7b6" letter-spacing="1">RIYADH, SAUDI ARABIA · SPEAKER</text>
+  </g>
+
+  <!-- HTB-style top right badge -->
+  <g transform="translate(960, 18)">
+    <rect x="0" y="0" width="200" height="38" rx="3" fill="#0d1a10" stroke="#9fef00" stroke-width="1.2"/>
+    <text x="10" y="14" font-family="monospace" font-size="9" fill="#9fef00" font-weight="bold">HTB CERTIFIED TALK</text>
+    <text x="10" y="28" font-family="monospace" font-size="8" fill="#2ee7b6">THREAT HUNTER · AI SECURITY</text>
+  </g>
+
+  <!-- Main floating title -->
+  <g filter="url(#glow)">
+    <text x="600" y="462" font-family="'Courier New',monospace" font-size="11" fill="#2ee7b6" text-anchor="middle" letter-spacing="5" opacity="0.9">AI × THREAT INTELLIGENCE</text>
+  </g>
+  <rect x="160" y="468" width="880" height="1.5" rx="1" fill="url(#glowLine)"/>
+  <text x="600" y="500" font-family="'Courier New',monospace" font-size="34" fill="#9fef00" text-anchor="middle" font-weight="bold" filter="url(#strongGlow)" letter-spacing="1">Advancing Predictive</text>
+  <text x="600" y="540" font-family="'Courier New',monospace" font-size="34" fill="white" text-anchor="middle" font-weight="bold" letter-spacing="1">Threat <tspan fill="#2ee7b6">Hunting</tspan></text>
+
+  <!-- Author strip bottom -->
+  <rect x="0" y="598" width="1200" height="32" fill="#050d08" opacity="0.95"/>
+  <line x1="0" y1="598" x2="1200" y2="598" stroke="#9fef00" stroke-width="0.8" opacity="0.5"/>
+  <text x="20" y="619" font-family="monospace" font-size="10" fill="#9fef00">OUSSAMA SAHNOUN</text>
+  <text x="200" y="619" font-family="monospace" font-size="9" fill="#444">|</text>
+  <text x="215" y="619" font-family="monospace" font-size="9" fill="#2ee7b6">CYBER SECURITY EXPERT @ VERMEG</text>
+  <text x="540" y="619" font-family="monospace" font-size="9" fill="#444">|</text>
+  <text x="555" y="619" font-family="monospace" font-size="9" fill="#9fef00">sahnoun11.github.io</text>
+  <text x="750" y="619" font-family="monospace" font-size="9" fill="#444">|</text>
+  <text x="765" y="619" font-family="monospace" font-size="9" fill="#2ee7b6">github.com/sahnoun11/ThreatLens</text>
+  <text x="1050" y="619" font-family="monospace" font-size="9" fill="#444">|</text>
+  <text x="1065" y="619" font-family="monospace" font-size="9" fill="#9fef00">@Sahnounoussama5</text>
+
+  </g><!-- end clip -->
+</svg>
