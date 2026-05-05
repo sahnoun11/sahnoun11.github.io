@@ -1,0 +1,166 @@
+<svg width="1000" height="500" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/><stop offset="100%" style="stop-color:#050d08"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrowR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff3e3e"/>
+    </marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9fef00"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="500" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="500" y="32" font-family="'Courier New',monospace" font-size="13" fill="#ff3e3e" text-anchor="middle" font-weight="bold" letter-spacing="3" filter="url(#glow)">◈  QAKBOT KILL CHAIN — INTELLIGENCE EXAMPLE  ◈</text>
+  <text x="500" y="50" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle" opacity="0.6">Active 2007–2025 · 50+ samples · 70+ IOCs · Post-Duck Hunt resurgence confirmed</text>
+  <line x1="40" y1="58" x2="960" y2="58" stroke="#ff3e3e" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- KILL CHAIN STAGES (horizontal timeline) -->
+  <!-- Stage 1: Initial Access -->
+  <g transform="translate(20, 75)">
+    <rect x="0" y="0" width="145" height="300" rx="8" fill="#0a0d14" stroke="#ff3e3e" stroke-width="1.5"/>
+    <rect x="0" y="0" width="145" height="28" rx="8" fill="#1a0808"/>
+    <rect x="0" y="14" width="145" height="14" fill="#1a0808"/>
+    <text x="72" y="19" font-family="monospace" font-size="8" fill="#ff3e3e" text-anchor="middle" font-weight="bold">INITIAL ACCESS</text>
+    <text x="72" y="58" font-family="monospace" font-size="28" text-anchor="middle">📧</text>
+    <text x="72" y="82" font-family="monospace" font-size="8" fill="#ff8484" text-anchor="middle" font-weight="bold">T1566.001</text>
+    <text x="72" y="94" font-family="monospace" font-size="7" fill="#cc4444" text-anchor="middle">Spear-phishing</text>
+    <line x1="8" y1="102" x2="137" y2="102" stroke="#ff3e3e" stroke-width="0.4" opacity="0.4"/>
+    <text x="8" y="116" font-family="monospace" font-size="6.5" fill="#884444">• Malicious .xlsb</text>
+    <text x="8" y="128" font-family="monospace" font-size="6.5" fill="#884444">• Excel 4.0 macros</text>
+    <text x="8" y="140" font-family="monospace" font-size="6.5" fill="#884444">• OneNote embed</text>
+    <text x="8" y="152" font-family="monospace" font-size="6.5" fill="#884444">• HTML smuggling</text>
+    <text x="8" y="164" font-family="monospace" font-size="6.5" fill="#884444">• ZIP password</text>
+    <text x="8" y="183" font-family="monospace" font-size="7" fill="#ff3e3e">Hunt queries:</text>
+    <text x="8" y="195" font-family="monospace" font-size="6" fill="#666">EventID 4688</text>
+    <text x="8" y="206" font-family="monospace" font-size="6" fill="#666">excel.exe spawning</text>
+    <text x="8" y="217" font-family="monospace" font-size="6" fill="#9fef00">cmd.exe / wscript</text>
+    <text x="8" y="235" font-family="monospace" font-size="7" fill="#ff3e3e">IOC examples:</text>
+    <text x="8" y="247" font-family="monospace" font-size="6" fill="#666">SHA256: a3f7b2...</text>
+    <text x="8" y="258" font-family="monospace" font-size="6" fill="#666">YARA: QakBot_v4</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="167" y1="225" x2="193" y2="225" stroke="#ff3e3e" stroke-width="2" marker-end="url(#arrowR)"/>
+
+  <!-- Stage 2: Execution -->
+  <g transform="translate(195, 75)">
+    <rect x="0" y="0" width="145" height="300" rx="8" fill="#0a0d14" stroke="#ffaf00" stroke-width="1.5"/>
+    <rect x="0" y="0" width="145" height="28" rx="8" fill="#1a1005"/>
+    <rect x="0" y="14" width="145" height="14" fill="#1a1005"/>
+    <text x="72" y="19" font-family="monospace" font-size="8" fill="#ffaf00" text-anchor="middle" font-weight="bold">EXECUTION</text>
+    <text x="72" y="58" font-family="monospace" font-size="28" text-anchor="middle">⚙️</text>
+    <text x="72" y="82" font-family="monospace" font-size="8" fill="#ffcc5c" text-anchor="middle" font-weight="bold">T1059.005</text>
+    <text x="72" y="94" font-family="monospace" font-size="7" fill="#cc8800" text-anchor="middle">VB Script / DLL</text>
+    <line x1="8" y1="102" x2="137" y2="102" stroke="#ffaf00" stroke-width="0.4" opacity="0.4"/>
+    <text x="8" y="116" font-family="monospace" font-size="6.5" fill="#887040">• regsvr32.exe DLL</text>
+    <text x="8" y="128" font-family="monospace" font-size="6.5" fill="#887040">• rundll32.exe</text>
+    <text x="8" y="140" font-family="monospace" font-size="6.5" fill="#887040">• mshta.exe abuse</text>
+    <text x="8" y="152" font-family="monospace" font-size="6.5" fill="#887040">• Process injection</text>
+    <text x="8" y="164" font-family="monospace" font-size="6.5" fill="#887040">• wermgr.exe host</text>
+    <text x="8" y="183" font-family="monospace" font-size="7" fill="#ffaf00">Hunt queries:</text>
+    <text x="8" y="195" font-family="monospace" font-size="6" fill="#666">regsvr32 unusual</text>
+    <text x="8" y="206" font-family="monospace" font-size="6" fill="#666">parent processes</text>
+    <text x="8" y="217" font-family="monospace" font-size="6" fill="#9fef00">rundll32 + net</text>
+    <text x="8" y="235" font-family="monospace" font-size="7" fill="#ffaf00">Anti-analysis:</text>
+    <text x="8" y="247" font-family="monospace" font-size="6" fill="#666">VM detect (CPUID)</text>
+    <text x="8" y="258" font-family="monospace" font-size="6" fill="#666">Debugger detect</text>
+    <text x="8" y="269" font-family="monospace" font-size="6" fill="#666">String encryption</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="342" y1="225" x2="368" y2="225" stroke="#ffaf00" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Stage 3: Persistence + C2 -->
+  <g transform="translate(370, 75)">
+    <rect x="0" y="0" width="145" height="300" rx="8" fill="#0a0d14" stroke="#2ee7b6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="145" height="28" rx="8" fill="#051520"/>
+    <rect x="0" y="14" width="145" height="14" fill="#051520"/>
+    <text x="72" y="19" font-family="monospace" font-size="7.5" fill="#2ee7b6" text-anchor="middle" font-weight="bold">PERSIST + C2</text>
+    <text x="72" y="58" font-family="monospace" font-size="28" text-anchor="middle">📡</text>
+    <text x="72" y="82" font-family="monospace" font-size="8" fill="#5cecc6" text-anchor="middle" font-weight="bold">T1547 / T1071</text>
+    <text x="72" y="94" font-family="monospace" font-size="7" fill="#1aaa88" text-anchor="middle">Registry + HTTPS</text>
+    <line x1="8" y1="102" x2="137" y2="102" stroke="#2ee7b6" stroke-width="0.4" opacity="0.4"/>
+    <text x="8" y="116" font-family="monospace" font-size="6.5" fill="#1a8870">• HKCU Run key</text>
+    <text x="8" y="128" font-family="monospace" font-size="6.5" fill="#1a8870">• Sched. task</text>
+    <text x="8" y="140" font-family="monospace" font-size="6.5" fill="#1a8870">• C2 over 443/80</text>
+    <text x="8" y="152" font-family="monospace" font-size="6.5" fill="#1a8870">• RC4 encrypted</text>
+    <text x="8" y="164" font-family="monospace" font-size="6.5" fill="#1a8870">• JA3: 72a7c...f</text>
+    <text x="8" y="183" font-family="monospace" font-size="7" fill="#2ee7b6">Hunt queries:</text>
+    <text x="8" y="195" font-family="monospace" font-size="6" fill="#666">HKCU\Run unusual</text>
+    <text x="8" y="206" font-family="monospace" font-size="6" fill="#666">beacon 60s interval</text>
+    <text x="8" y="217" font-family="monospace" font-size="6" fill="#9fef00">JA3 fingerprint</text>
+    <text x="8" y="235" font-family="monospace" font-size="7" fill="#2ee7b6">C2 IOCs (2025):</text>
+    <text x="8" y="247" font-family="monospace" font-size="6" fill="#666">185.220.x.x/24</text>
+    <text x="8" y="258" font-family="monospace" font-size="6" fill="#666">Port: 443, 2222</text>
+    <text x="8" y="269" font-family="monospace" font-size="6" fill="#666">50+ active C2 IPs</text>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <line x1="517" y1="225" x2="543" y2="225" stroke="#2ee7b6" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Stage 4: Lateral Movement -->
+  <g transform="translate(545, 75)">
+    <rect x="0" y="0" width="145" height="300" rx="8" fill="#0a0d14" stroke="#c16cfa" stroke-width="1.5"/>
+    <rect x="0" y="0" width="145" height="28" rx="8" fill="#150520"/>
+    <rect x="0" y="14" width="145" height="14" fill="#150520"/>
+    <text x="72" y="19" font-family="monospace" font-size="7.5" fill="#c16cfa" text-anchor="middle" font-weight="bold">LATERAL MOVE</text>
+    <text x="72" y="58" font-family="monospace" font-size="28" text-anchor="middle">🌐</text>
+    <text x="72" y="82" font-family="monospace" font-size="8" fill="#c16cfa" text-anchor="middle" font-weight="bold">T1021 / T1550</text>
+    <text x="72" y="94" font-family="monospace" font-size="7" fill="#9040d0" text-anchor="middle">SMB / Pass-the-Hash</text>
+    <line x1="8" y1="102" x2="137" y2="102" stroke="#c16cfa" stroke-width="0.4" opacity="0.4"/>
+    <text x="8" y="116" font-family="monospace" font-size="6.5" fill="#703090">• PsExec / SMB</text>
+    <text x="8" y="128" font-family="monospace" font-size="6.5" fill="#703090">• Pass-the-Hash</text>
+    <text x="8" y="140" font-family="monospace" font-size="6.5" fill="#703090">• Kerberoasting</text>
+    <text x="8" y="152" font-family="monospace" font-size="6.5" fill="#703090">• LDAP recon</text>
+    <text x="8" y="164" font-family="monospace" font-size="6.5" fill="#703090">• Cobalt Strike</text>
+    <text x="8" y="183" font-family="monospace" font-size="7" fill="#c16cfa">Hunt queries:</text>
+    <text x="8" y="195" font-family="monospace" font-size="6" fill="#666">4624 logon type 3</text>
+    <text x="8" y="206" font-family="monospace" font-size="6" fill="#666">NTLM auth anomaly</text>
+    <text x="8" y="217" font-family="monospace" font-size="6" fill="#9fef00">SPNs enumeration</text>
+    <text x="8" y="235" font-family="monospace" font-size="7" fill="#c16cfa">Avg dwell:</text>
+    <text x="8" y="247" font-family="monospace" font-size="6" fill="#ff8484" font-weight="bold">47 days undetected</text>
+    <text x="8" y="258" font-family="monospace" font-size="6" fill="#666">before alerts fire</text>
+  </g>
+
+  <!-- Arrow 4→5 -->
+  <line x1="692" y1="225" x2="718" y2="225" stroke="#c16cfa" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Stage 5: Impact -->
+  <g transform="translate(720, 75)">
+    <rect x="0" y="0" width="255" height="300" rx="8" fill="#0a0d14" stroke="#9fef00" stroke-width="2"/>
+    <rect x="0" y="0" width="255" height="28" rx="8" fill="#0a1f10"/>
+    <rect x="0" y="14" width="255" height="14" fill="#0a1f10"/>
+    <text x="127" y="19" font-family="monospace" font-size="8" fill="#9fef00" text-anchor="middle" font-weight="bold">IMPACT + AI RESPONSE</text>
+    <text x="127" y="58" font-family="monospace" font-size="28" text-anchor="middle">🎯</text>
+    <text x="8" y="82" font-family="monospace" font-size="8" fill="#9fef00">QakBot delivers:</text>
+    <text x="8" y="96" font-family="monospace" font-size="7" fill="#6abf00">• Ransomware (Conti, Ryuk)</text>
+    <text x="8" y="108" font-family="monospace" font-size="7" fill="#6abf00">• Banking credential theft</text>
+    <text x="8" y="120" font-family="monospace" font-size="7" fill="#6abf00">• Cobalt Strike beacon</text>
+    <line x1="8" y1="130" x2="247" y2="130" stroke="#9fef00" stroke-width="0.4" opacity="0.4"/>
+    <text x="8" y="148" font-family="monospace" font-size="8" fill="#9fef00">ThreatLens answers:</text>
+    <rect x="8" y="155" width="239" height="20" rx="3" fill="#050d08" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="14" y="168" font-family="monospace" font-size="6.5" fill="#2ee7b6">"What QakBot IOCs are in this log?"</text>
+    <text x="14" y="183" font-family="monospace" font-size="6.5" fill="#9fef00">→ Extracts 47 IOCs in 8 seconds</text>
+    <rect x="8" y="192" width="239" height="20" rx="3" fill="#050d08" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="14" y="205" font-family="monospace" font-size="6.5" fill="#2ee7b6">"Map events to ATT&amp;CK?"</text>
+    <text x="14" y="219" font-family="monospace" font-size="6.5" fill="#9fef00">→ Full TTP map with confidence scores</text>
+    <rect x="8" y="228" width="239" height="20" rx="3" fill="#050d08" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="14" y="241" font-family="monospace" font-size="6.5" fill="#2ee7b6">"Affected hosts?"</text>
+    <text x="14" y="255" font-family="monospace" font-size="6.5" fill="#9fef00">→ Pivot chain reconstructed instantly</text>
+    <text x="8" y="278" font-family="monospace" font-size="7" fill="#ff3e3e">Manual: 3–5 analyst days</text>
+    <text x="8" y="292" font-family="monospace" font-size="7" fill="#9fef00">ThreatLens: &lt;2 minutes</text>
+  </g>
+
+  <!-- Timeline bar at bottom -->
+  <line x1="20" y1="400" x2="975" y2="400" stroke="#9fef00" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="420" font-family="monospace" font-size="9" fill="#ff3e3e" text-anchor="middle">QakBot timeline: 2007 (first seen) → 2019 (major wave) → Aug 2023 (Duck Hunt takedown) → 2024–25 (resurgence)</text>
+  <text x="500" y="436" font-family="monospace" font-size="8" fill="#444" text-anchor="middle">Intelligence sources: 50+ malware samples · 70+ IOCs · MITRE ATT&amp;CK mapping · Dark web tracking · ISAC sharing</text>
+  <text x="500" y="452" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">Black Hat MEA 2025 · Oussama Sahnoun · ThreatLens · github.com/sahnoun11/ThreatLens</text>
+  <text x="500" y="468" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">All of the above intelligence can be queried in plain English via ThreatLens in seconds — not hours.</text>
+  <text x="500" y="484" font-family="monospace" font-size="7" fill="#222" text-anchor="middle">Processing time (human): 3–5 days ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  vs  ThreatLens: 2 min ■</text>
+</svg>

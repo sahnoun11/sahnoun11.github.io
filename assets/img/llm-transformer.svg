@@ -1,0 +1,211 @@
+<svg width="1000" height="520" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/><stop offset="100%" style="stop-color:#0d150a"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrowG" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#9fef00"/>
+    </marker>
+    <marker id="arrowC" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#2ee7b6"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="520" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="500" y="32" font-family="'Courier New',monospace" font-size="13" fill="#9fef00" text-anchor="middle" font-weight="bold" letter-spacing="3" filter="url(#glow)">◈  TRANSFORMER ARCHITECTURE — HOW LLMs PROCESS THREAT INTEL  ◈</text>
+  <line x1="60" y1="40" x2="940" y2="40" stroke="#9fef00" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- STAGE 1: INPUT TEXT -->
+  <rect x="20" y="60" width="160" height="380" rx="8" fill="#0a0d14" stroke="#9fef00" stroke-width="1.5"/>
+  <rect x="20" y="60" width="160" height="28" rx="8" fill="#0a1f10"/>
+  <rect x="20" y="76" width="160" height="12" fill="#0a1f10"/>
+  <text x="100" y="78" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" font-weight="bold" letter-spacing="2">INPUT TEXT</text>
+  <!-- Sample security text being tokenized -->
+  <text x="30" y="108" font-family="monospace" font-size="7" fill="#444">Raw input:</text>
+  <rect x="27" y="113" width="146" height="52" rx="3" fill="#050d08" stroke="#333" stroke-width="0.5"/>
+  <text x="32" y="126" font-family="monospace" font-size="6.5" fill="#666">"QakBot loader used</text>
+  <text x="32" y="137" font-family="monospace" font-size="6.5" fill="#666"> Excel 4.0 macros to</text>
+  <text x="32" y="148" font-family="monospace" font-size="6.5" fill="#666"> establish C2 via port</text>
+  <text x="32" y="159" font-family="monospace" font-size="6.5" fill="#666"> 443 to 185.x.x.x"</text>
+  <!-- Tokenization -->
+  <text x="30" y="185" font-family="monospace" font-size="7" fill="#9fef00">Tokenized:</text>
+  <g font-family="monospace" font-size="7">
+    <rect x="27" y="190" width="38" height="14" rx="2" fill="#0a2a18" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="46" y="201" fill="#9fef00" text-anchor="middle">Qak</text>
+    <rect x="68" y="190" width="32" height="14" rx="2" fill="#0a2a18" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="84" y="201" fill="#9fef00" text-anchor="middle">Bot</text>
+    <rect x="103" y="190" width="42" height="14" rx="2" fill="#0a2a18" stroke="#2ee7b6" stroke-width="0.7"/>
+    <text x="124" y="201" fill="#2ee7b6" text-anchor="middle">loader</text>
+    <rect x="27" y="208" width="32" height="14" rx="2" fill="#0a2a18" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="43" y="219" fill="#9fef00" text-anchor="middle">used</text>
+    <rect x="62" y="208" width="36" height="14" rx="2" fill="#0a2a18" stroke="#2ee7b6" stroke-width="0.7"/>
+    <text x="80" y="219" fill="#2ee7b6" text-anchor="middle">Excel</text>
+    <rect x="101" y="208" width="24" height="14" rx="2" fill="#0a2a18" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="113" y="219" fill="#9fef00" text-anchor="middle">4.0</text>
+    <rect x="27" y="226" width="50" height="14" rx="2" fill="#0a2a18" stroke="#2ee7b6" stroke-width="0.7"/>
+    <text x="52" y="237" fill="#2ee7b6" text-anchor="middle">macros</text>
+    <rect x="80" y="226" width="32" height="14" rx="2" fill="#0a2a18" stroke="#9fef00" stroke-width="0.7"/>
+    <text x="96" y="237" fill="#9fef00" text-anchor="middle">C2</text>
+  </g>
+  <text x="30" y="260" font-family="monospace" font-size="7" fill="#666">256K token context</text>
+  <text x="30" y="272" font-family="monospace" font-size="7" fill="#666">window for large</text>
+  <text x="30" y="284" font-family="monospace" font-size="7" fill="#666">threat reports</text>
+
+  <!-- STAGE 2: EMBEDDINGS -->
+  <line x1="182" y1="250" x2="218" y2="250" stroke="#9fef00" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <rect x="220" y="60" width="155" height="380" rx="8" fill="#0a0d14" stroke="#2ee7b6" stroke-width="1.5"/>
+  <rect x="220" y="60" width="155" height="28" rx="8" fill="#051520"/>
+  <rect x="220" y="76" width="155" height="12" fill="#051520"/>
+  <text x="298" y="78" font-family="monospace" font-size="9" fill="#2ee7b6" text-anchor="middle" font-weight="bold" letter-spacing="1">EMBEDDINGS</text>
+  <text x="230" y="108" font-family="monospace" font-size="7" fill="#2ee7b6">Token → 768-dim vector</text>
+  <!-- Vector visualization -->
+  <rect x="228" y="116" width="139" height="140" rx="3" fill="#050d08" stroke="#2ee7b6" stroke-width="0.5"/>
+  <text x="233" y="129" font-family="monospace" font-size="6">" QakBot "</text>
+  <text x="233" y="141" font-family="monospace" font-size="6" fill="#2ee7b6">→ [0.82, -0.34, 0.91,</text>
+  <text x="233" y="152" font-family="monospace" font-size="6" fill="#2ee7b6">    0.12, -0.67, 0.55,</text>
+  <text x="233" y="163" font-family="monospace" font-size="6" fill="#9fef00">    ... 768 dims ...]</text>
+  <text x="233" y="180" font-family="monospace" font-size="6">" malware "</text>
+  <text x="233" y="192" font-family="monospace" font-size="6" fill="#2ee7b6">→ [0.79, -0.31, 0.88,</text>
+  <text x="233" y="203" font-family="monospace" font-size="6" fill="#2ee7b6">    0.15, -0.62, 0.51,</text>
+  <text x="233" y="214" font-family="monospace" font-size="6" fill="#9fef00">    ... 768 dims ...]</text>
+  <text x="233" y="232" font-family="monospace" font-size="6.5" fill="#1aaa88">cosine(QakBot,malware)</text>
+  <text x="233" y="244" font-family="monospace" font-size="6.5" fill="#9fef00">= 0.94 → very similar</text>
+  <!-- Semantic space visualization -->
+  <text x="230" y="275" font-family="monospace" font-size="7" fill="#2ee7b6">Semantic proximity:</text>
+  <circle cx="260" cy="300" r="5" fill="#9fef00" opacity="0.8"/>
+  <text x="270" y="304" font-family="monospace" font-size="6" fill="#9fef00">QakBot</text>
+  <circle cx="290" cy="295" r="4" fill="#2ee7b6" opacity="0.7"/>
+  <text x="298" y="299" font-family="monospace" font-size="6" fill="#2ee7b6">malware</text>
+  <circle cx="275" cy="318" r="4" fill="#9fef00" opacity="0.7"/>
+  <text x="283" y="322" font-family="monospace" font-size="6" fill="#9fef00">trojan</text>
+  <circle cx="320" cy="310" r="3" fill="#ffaf00" opacity="0.6"/>
+  <text x="328" y="314" font-family="monospace" font-size="6" fill="#ffaf00">C2</text>
+  <!-- Distance lines -->
+  <line x1="260" y1="300" x2="290" y2="295" stroke="#2ee7b6" stroke-width="0.8" opacity="0.5"/>
+  <line x1="260" y1="300" x2="275" y2="318" stroke="#9fef00" stroke-width="0.8" opacity="0.5"/>
+  <line x1="290" y1="295" x2="320" y2="310" stroke="#ffaf00" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- STAGE 3: ATTENTION -->
+  <line x1="377" y1="250" x2="413" y2="250" stroke="#2ee7b6" stroke-width="1.5" marker-end="url(#arrowC)"/>
+  <rect x="415" y="60" width="170" height="380" rx="8" fill="#0a0d14" stroke="#c16cfa" stroke-width="2"/>
+  <rect x="415" y="60" width="170" height="28" rx="8" fill="#150520"/>
+  <rect x="415" y="76" width="170" height="12" fill="#150520"/>
+  <text x="500" y="78" font-family="monospace" font-size="9" fill="#c16cfa" text-anchor="middle" font-weight="bold" letter-spacing="1">SELF-ATTENTION</text>
+  <text x="424" y="106" font-family="monospace" font-size="7" fill="#c16cfa">The core innovation:</text>
+  <text x="424" y="118" font-family="monospace" font-size="7" fill="#9040d0">Every token attends</text>
+  <text x="424" y="130" font-family="monospace" font-size="7" fill="#9040d0">to every other token</text>
+  <!-- Attention matrix visualization -->
+  <text x="424" y="150" font-family="monospace" font-size="6.5" fill="#c16cfa">N×N attention matrix:</text>
+  <g transform="translate(424, 155)">
+    <!-- Matrix cells with varying opacity showing attention weights -->
+    <g font-family="monospace" font-size="5.5">
+      <!-- Header row -->
+      <text x="30" y="10" fill="#666" text-anchor="middle">Qak</text>
+      <text x="55" y="10" fill="#666" text-anchor="middle">Bot</text>
+      <text x="80" y="10" fill="#666" text-anchor="middle">C2</text>
+      <text x="105" y="10" fill="#666" text-anchor="middle">443</text>
+      <!-- Row 1: QakBot → high attention to C2, port -->
+      <text x="8" y="25" fill="#666">Qak</text>
+      <rect x="22" y="15" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.9"/>
+      <rect x="47" y="15" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.7"/>
+      <rect x="72" y="15" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.95"/>
+      <rect x="97" y="15" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.6"/>
+      <!-- Row 2 -->
+      <text x="8" y="43" fill="#666">Bot</text>
+      <rect x="22" y="33" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.7"/>
+      <rect x="47" y="33" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.9"/>
+      <rect x="72" y="33" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.8"/>
+      <rect x="97" y="33" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.4"/>
+      <!-- Row 3: C2 → high attention to port 443 -->
+      <text x="8" y="61" fill="#666">C2</text>
+      <rect x="22" y="51" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.95"/>
+      <rect x="47" y="51" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.8"/>
+      <rect x="72" y="51" width="20" height="14" rx="1" fill="#c16cfa" opacity="1"/>
+      <rect x="97" y="51" width="20" height="14" rx="1" fill="#9fef00" opacity="0.9"/>
+      <!-- Row 4: port 443 -->
+      <text x="8" y="79" fill="#666">443</text>
+      <rect x="22" y="69" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.6"/>
+      <rect x="47" y="69" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.4"/>
+      <rect x="72" y="69" width="20" height="14" rx="1" fill="#9fef00" opacity="0.9"/>
+      <rect x="97" y="69" width="20" height="14" rx="1" fill="#c16cfa" opacity="0.9"/>
+    </g>
+  </g>
+  <text x="424" y="285" font-family="monospace" font-size="6.5" fill="#9040d0">Model learns: QakBot</text>
+  <text x="424" y="296" font-family="monospace" font-size="6.5" fill="#9040d0">and C2 are strongly</text>
+  <text x="424" y="307" font-family="monospace" font-size="6.5" fill="#9040d0">related to port 443</text>
+  <text x="424" y="325" font-family="monospace" font-size="6.5" fill="#c16cfa">Multi-head attention:</text>
+  <text x="424" y="336" font-family="monospace" font-size="6.5" fill="#9040d0">8-64 heads running in</text>
+  <text x="424" y="347" font-family="monospace" font-size="6.5" fill="#9040d0">parallel. Each head</text>
+  <text x="424" y="358" font-family="monospace" font-size="6.5" fill="#9040d0">captures different</text>
+  <text x="424" y="369" font-family="monospace" font-size="6.5" fill="#9040d0">relationships.</text>
+
+  <!-- STAGE 4: HIDDEN LAYERS -->
+  <line x1="587" y1="250" x2="623" y2="250" stroke="#c16cfa" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <rect x="625" y="60" width="150" height="380" rx="8" fill="#0a0d14" stroke="#ffaf00" stroke-width="1.5"/>
+  <rect x="625" y="60" width="150" height="28" rx="8" fill="#1a1005"/>
+  <rect x="625" y="76" width="150" height="12" fill="#1a1005"/>
+  <text x="700" y="78" font-family="monospace" font-size="9" fill="#ffaf00" text-anchor="middle" font-weight="bold" letter-spacing="1">HIDDEN LAYERS</text>
+  <text x="633" y="105" font-family="monospace" font-size="7" fill="#ffaf00">N×transformer blocks</text>
+  <text x="633" y="116" font-family="monospace" font-size="7" fill="#cc8800">Parametric knowledge</text>
+  <!-- Stacked layer visualization -->
+  <g opacity="0.8">
+    <rect x="633" y="125" width="134" height="20" rx="3" fill="#1a1005" stroke="#ffaf00" stroke-width="1"/>
+    <text x="700" y="139" font-family="monospace" font-size="7" fill="#ffaf00" text-anchor="middle">Layer 32 (top)</text>
+    <rect x="633" y="150" width="134" height="20" rx="3" fill="#1a1005" stroke="#cc8800" stroke-width="0.8"/>
+    <text x="700" y="164" font-family="monospace" font-size="7" fill="#cc8800" text-anchor="middle">Layer 16 (mid)</text>
+    <rect x="633" y="175" width="134" height="20" rx="3" fill="#1a1005" stroke="#9a6000" stroke-width="0.6"/>
+    <text x="700" y="189" font-family="monospace" font-size="7" fill="#9a6000" text-anchor="middle">Layer 8</text>
+    <rect x="633" y="200" width="134" height="20" rx="3" fill="#1a1005" stroke="#664000" stroke-width="0.5"/>
+    <text x="700" y="214" font-family="monospace" font-size="7" fill="#664000" text-anchor="middle">Layer 1 (bottom)</text>
+  </g>
+  <!-- Knowledge stored -->
+  <text x="633" y="240" font-family="monospace" font-size="7" fill="#ffaf00">Stored knowledge:</text>
+  <text x="633" y="252" font-family="monospace" font-size="6.5" fill="#9a6000">• CVE descriptions</text>
+  <text x="633" y="263" font-family="monospace" font-size="6.5" fill="#9a6000">• ATT&amp;CK techniques</text>
+  <text x="633" y="274" font-family="monospace" font-size="6.5" fill="#9a6000">• Malware families</text>
+  <text x="633" y="285" font-family="monospace" font-size="6.5" fill="#9a6000">• TTP patterns</text>
+  <text x="633" y="296" font-family="monospace" font-size="6.5" fill="#9a6000">• Threat actor TTPs</text>
+  <text x="633" y="307" font-family="monospace" font-size="6.5" fill="#9a6000">• Security blogs</text>
+  <text x="633" y="318" font-family="monospace" font-size="6.5" fill="#9a6000">• Incident reports</text>
+  <text x="633" y="336" font-family="monospace" font-size="7" fill="#ffaf00">= compressed from</text>
+  <text x="633" y="348" font-family="monospace" font-size="7" fill="#cc8800">trillions of tokens</text>
+
+  <!-- STAGE 5: OUTPUT -->
+  <line x1="777" y1="250" x2="813" y2="250" stroke="#ffaf00" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <rect x="815" y="60" width="170" height="380" rx="8" fill="#0a0d14" stroke="#9fef00" stroke-width="2"/>
+  <rect x="815" y="60" width="170" height="28" rx="8" fill="#0a1f10"/>
+  <rect x="815" y="76" width="170" height="12" fill="#0a1f10"/>
+  <text x="900" y="78" font-family="monospace" font-size="9" fill="#9fef00" text-anchor="middle" font-weight="bold" letter-spacing="1">OUTPUT</text>
+  <text x="824" y="105" font-family="monospace" font-size="7" fill="#9fef00">Softmax probability</text>
+  <text x="824" y="116" font-family="monospace" font-size="7" fill="#6abf00">over full vocabulary</text>
+  <!-- Token probability bars -->
+  <text x="824" y="135" font-family="monospace" font-size="6.5" fill="#9fef00">Next token P:</text>
+  <g font-family="monospace" font-size="6">
+    <text x="824" y="150" fill="#2ee7b6">"T1021"   </text><rect x="880" y="142" width="60" height="9" rx="1" fill="#9fef00" opacity="0.85"/><text x="943" y="150" fill="#9fef00">0.62</text>
+    <text x="824" y="164" fill="#666">"attack"  </text><rect x="880" y="156" width="32" height="9" rx="1" fill="#9fef00" opacity="0.45"/><text x="943" y="164" fill="#9fef00">0.21</text>
+    <text x="824" y="178" fill="#666">"exploit" </text><rect x="880" y="170" width="15" height="9" rx="1" fill="#9fef00" opacity="0.25"/><text x="943" y="178" fill="#9fef00">0.09</text>
+    <text x="824" y="192" fill="#666">"CVE"     </text><rect x="880" y="184" width="8" height="9" rx="1" fill="#9fef00" opacity="0.12"/><text x="943" y="192" fill="#9fef00">0.05</text>
+  </g>
+  <text x="824" y="215" font-family="monospace" font-size="6.5" fill="#9fef00">→ selects "T1021"</text>
+  <text x="824" y="225" font-family="monospace" font-size="6.5" fill="#6abf00">→ iterates next token</text>
+  <!-- Final output box -->
+  <text x="824" y="245" font-family="monospace" font-size="7" fill="#9fef00">Final answer:</text>
+  <rect x="824" y="250" width="153" height="120" rx="4" fill="#050d08" stroke="#9fef00" stroke-width="1"/>
+  <text x="830" y="264" font-family="monospace" font-size="6">"The lateral movement</text>
+  <text x="830" y="276" font-family="monospace" font-size="6">pattern indicates</text>
+  <text x="830" y="288" font-family="monospace" font-size="6">T1021.003 (DCOM).</text>
+  <text x="830" y="300" font-family="monospace" font-size="6">EventID sequence:</text>
+  <text x="830" y="312" font-family="monospace" font-size="6" fill="#ff3e3e">4625→4688→4720</text>
+  <text x="830" y="324" font-family="monospace" font-size="6">Confidence: 0.94</text>
+  <text x="830" y="336" font-family="monospace" font-size="6" fill="#9fef00">Isolate 10.0.1.67</text>
+  <text x="830" y="352" font-family="monospace" font-size="6" fill="#9fef00">immediately."</text>
+
+  <!-- Footer -->
+  <line x1="20" y1="455" x2="980" y2="455" stroke="#9fef00" stroke-width="0.5" opacity="0.25"/>
+  <text x="500" y="475" font-family="monospace" font-size="8" fill="#2ee7b6" text-anchor="middle">Architecture: Vaswani et al. "Attention Is All You Need" (2017) · Applied to Cyber: ThreatLens · Black Hat MEA 2025</text>
+  <text x="500" y="492" font-family="monospace" font-size="7" fill="#444" text-anchor="middle">Parameters: QKV projection · Feed-forward layers · Layer normalization · Residual connections · Position encoding</text>
+  <text x="500" y="509" font-family="monospace" font-size="7" fill="#333" text-anchor="middle">Security fine-tuning corpus: CVEs · MITRE ATT&amp;CK · Threat reports · Malware analysis · OSINT feeds</text>
+</svg>

@@ -1,0 +1,124 @@
+<svg width="1000" height="560" viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/><stop offset="100%" style="stop-color:#050d08"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowS"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1000" height="560" fill="url(#bg)" rx="12"/>
+
+  <!-- Window chrome — browser/app frame -->
+  <rect x="10" y="10" width="980" height="540" rx="10" fill="#0d1520" stroke="#1a3a2a" stroke-width="1.5"/>
+
+  <!-- Title bar -->
+  <rect x="10" y="10" width="980" height="38" rx="10" fill="#0a1f10"/>
+  <rect x="10" y="30" width="980" height="18" fill="#0a1f10"/>
+  <!-- Traffic lights -->
+  <circle cx="32" cy="29" r="6" fill="#ff3e3e" opacity="0.9"/>
+  <circle cx="52" cy="29" r="6" fill="#ffaf00" opacity="0.9"/>
+  <circle cx="72" cy="29" r="6" fill="#9fef00" opacity="0.9"/>
+  <!-- App name -->
+  <text x="500" y="34" font-family="'Courier New',monospace" font-size="11" fill="#9fef00" text-anchor="middle" font-weight="bold" filter="url(#glow)">⚡ ThreatLens — AI-Powered Log Analysis · localhost:8501</text>
+
+  <!-- LEFT SIDEBAR — navigation -->
+  <rect x="10" y="48" width="200" height="502" fill="#080f0c" rx="0"/>
+  <rect x="10" y="48" width="200" height="502" fill="#9fef00" opacity="0.02"/>
+
+  <!-- Sidebar header -->
+  <text x="110" y="75" font-family="monospace" font-size="10" fill="#9fef00" text-anchor="middle" font-weight="bold">🛡 ThreatLens</text>
+  <text x="110" y="89" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">v1.0.0 · Black Hat MEA</text>
+  <line x1="18" y1="96" x2="202" y2="96" stroke="#9fef00" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Upload section -->
+  <text x="20" y="114" font-family="monospace" font-size="8" fill="#9fef00">📂 Upload Log File</text>
+  <rect x="18" y="120" width="184" height="52" rx="4" fill="#0d1f10" stroke="#9fef00" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="110" y="142" font-family="monospace" font-size="7.5" fill="#4a8f20" text-anchor="middle">security.evtx</text>
+  <text x="110" y="155" font-family="monospace" font-size="7" fill="#2ee7b6" text-anchor="middle">✓ loaded · 847 events</text>
+  <text x="110" y="166" font-family="monospace" font-size="6.5" fill="#333" text-anchor="middle">Drop .evtx or .txt here</text>
+
+  <!-- Supported formats -->
+  <text x="20" y="188" font-family="monospace" font-size="7" fill="#444">Supported: .evtx .txt .log</text>
+
+  <!-- Stats panel -->
+  <rect x="18" y="196" width="184" height="80" rx="4" fill="#0a1a10" stroke="#2ee7b6" stroke-width="0.7"/>
+  <text x="26" y="213" font-family="monospace" font-size="7.5" fill="#2ee7b6">📊 Session Stats</text>
+  <line x1="22" y1="217" x2="196" y2="217" stroke="#2ee7b6" stroke-width="0.3" opacity="0.5"/>
+  <text x="26" y="232" font-family="monospace" font-size="7" fill="#9fef00">Events parsed:  </text><text x="130" y="232" font-family="monospace" font-size="7" fill="#9fef00" font-weight="bold">847</text>
+  <text x="26" y="244" font-family="monospace" font-size="7" fill="#9fef00">Chunks created: </text><text x="130" y="244" font-family="monospace" font-size="7" fill="#9fef00" font-weight="bold">183</text>
+  <text x="26" y="256" font-family="monospace" font-size="7" fill="#9fef00">Vectors stored: </text><text x="130" y="256" font-family="monospace" font-size="7" fill="#9fef00" font-weight="bold">183</text>
+  <text x="26" y="268" font-family="monospace" font-size="7" fill="#ff3e3e">Critical alerts: </text><text x="130" y="268" font-family="monospace" font-size="7" fill="#ff3e3e" font-weight="bold">3</text>
+
+  <!-- Model info -->
+  <rect x="18" y="285" width="184" height="75" rx="4" fill="#0a1a10" stroke="#9fef00" stroke-width="0.7"/>
+  <text x="26" y="302" font-family="monospace" font-size="7.5" fill="#9fef00">⚡ Model Config</text>
+  <line x1="22" y1="306" x2="196" y2="306" stroke="#9fef00" stroke-width="0.3" opacity="0.5"/>
+  <text x="26" y="320" font-family="monospace" font-size="6.5" fill="#4a8f20">LLM: llama-3.3-70b</text>
+  <text x="26" y="332" font-family="monospace" font-size="6.5" fill="#4a8f20">Embed: nomic-embed</text>
+  <text x="26" y="344" font-family="monospace" font-size="6.5" fill="#4a8f20">DB: pgvector :5532</text>
+  <text x="26" y="356" font-family="monospace" font-size="6.5" fill="#2ee7b6">Status: ● online</text>
+
+  <!-- Quick queries -->
+  <text x="20" y="378" font-family="monospace" font-size="7.5" fill="#9fef00">💡 Quick Queries</text>
+  <rect x="18" y="383" width="184" height="16" rx="3" fill="#0d1f10" stroke="#9fef00" stroke-width="0.7"/>
+  <text x="26" y="395" font-family="monospace" font-size="6.5" fill="#6abf00">Failed logins?</text>
+  <rect x="18" y="402" width="184" height="16" rx="3" fill="#0d1f10" stroke="#9fef00" stroke-width="0.7"/>
+  <text x="26" y="414" font-family="monospace" font-size="6.5" fill="#6abf00">Lateral movement?</text>
+  <rect x="18" y="421" width="184" height="16" rx="3" fill="#0d1f10" stroke="#9fef00" stroke-width="0.7"/>
+  <text x="26" y="433" font-family="monospace" font-size="6.5" fill="#6abf00">Map to ATT&amp;CK?</text>
+  <rect x="18" y="440" width="184" height="16" rx="3" fill="#0d1f10" stroke="#9fef00" stroke-width="0.7"/>
+  <text x="26" y="452" font-family="monospace" font-size="6.5" fill="#6abf00">Privilege escalation?</text>
+  <rect x="18" y="459" width="184" height="16" rx="3" fill="#0d1f10" stroke="#9fef00" stroke-width="0.7"/>
+  <text x="26" y="471" font-family="monospace" font-size="6.5" fill="#6abf00">C2 indicators?</text>
+
+  <!-- MAIN CONTENT AREA -->
+  <!-- Chat history - previous exchange -->
+  <rect x="218" y="58" width="772" height="420" rx="4" fill="#080f0c"/>
+
+  <!-- Exchange 1 — User question -->
+  <rect x="228" y="68" width="752" height="22" rx="3" fill="#0a1a10"/>
+  <text x="236" y="83" font-family="monospace" font-size="8" fill="#2ee7b6">👤 You:  Are there any signs of lateral movement in this Windows event log?</text>
+
+  <!-- Exchange 1 — ThreatLens response (condensed) -->
+  <rect x="228" y="96" width="752" height="95" rx="3" fill="#0d1f14" stroke="#9fef00" stroke-width="0.6"/>
+  <text x="236" y="111" font-family="monospace" font-size="8" fill="#9fef00">⚡ ThreatLens:</text>
+  <text x="236" y="126" font-family="monospace" font-size="7.5" fill="#6abf00">Yes — a classic 3-stage lateral movement pattern is present. Timeline reconstruction:</text>
+  <text x="236" y="140" font-family="monospace" font-size="7" fill="#2ee7b6">  02:14:33  EventID 4625  WORKSTATION-07 → SERVER-01  [FAILED AUTH - 14 attempts]</text>
+  <text x="236" y="152" font-family="monospace" font-size="7" fill="#ff8484">  02:17:11  EventID 4688  wmic.exe spawned by mmc.exe on SERVER-01  [SUSPICIOUS]</text>
+  <text x="236" y="164" font-family="monospace" font-size="7" fill="#ff3e3e">  02:19:47  EventID 4720  New local account 'svc_backup2' created by SYSTEM  [CRITICAL]</text>
+  <text x="236" y="178" font-family="monospace" font-size="7" fill="#9fef00">  ATT&amp;CK: T1021.003 (DCOM) · T1136.001 (Local Account) · Confidence: 0.94</text>
+  <text x="236" y="190" font-family="monospace" font-size="7" fill="#ffaf00">  ⚠ RECOMMEND: Isolate SERVER-01 immediately. Revoke svc_backup2. Investigate WORKSTATION-07.</text>
+
+  <!-- Exchange 2 — User -->
+  <rect x="228" y="198" width="752" height="22" rx="3" fill="#0a1a10"/>
+  <text x="236" y="213" font-family="monospace" font-size="8" fill="#2ee7b6">👤 You:  Map all suspicious events to MITRE ATT&amp;CK and give me the full list</text>
+
+  <!-- Exchange 2 — Response -->
+  <rect x="228" y="226" width="752" height="115" rx="3" fill="#0d1f14" stroke="#9fef00" stroke-width="0.6"/>
+  <text x="236" y="241" font-family="monospace" font-size="8" fill="#9fef00">⚡ ThreatLens:</text>
+  <!-- ATT&CK table -->
+  <rect x="236" y="247" width="735" height="14" rx="2" fill="#0a2a18"/>
+  <text x="240" y="258" font-family="monospace" font-size="6.5" fill="#9fef00">TECHNIQUE ID    TECHNIQUE NAME                    TACTIC              CONFIDENCE  EVENTS</text>
+  <line x1="236" y1="262" x2="968" y2="262" stroke="#9fef00" stroke-width="0.4" opacity="0.4"/>
+  <text x="240" y="273" font-family="monospace" font-size="6.5" fill="#ff3e3e">T1078.003       Valid Accounts: Local Accounts     Persistence         0.96        4720,4722</text>
+  <text x="240" y="284" font-family="monospace" font-size="6.5" fill="#ff8484">T1021.003       Remote Services: DCOM             Lateral Movement    0.94        4688,4624</text>
+  <text x="240" y="295" font-family="monospace" font-size="6.5" fill="#ffaf00">T1059.001       PowerShell                        Execution           0.89        4103,4104</text>
+  <text x="240" y="306" font-family="monospace" font-size="6.5" fill="#ffaf00">T1110.001       Password Spraying                  Credential Access   0.91        4625×14</text>
+  <text x="240" y="317" font-family="monospace" font-size="6.5" fill="#2ee7b6">T1547.001       Registry Run Keys                 Persistence         0.82        13,14</text>
+  <text x="240" y="328" font-family="monospace" font-size="6.5" fill="#2ee7b6">T1070.001       Clear Windows Event Logs           Defense Evasion     0.78        1102,104</text>
+  <text x="240" y="339" font-family="monospace" font-size="6.5" fill="#9fef00">Retrieved from 7 relevant log chunks · Generated in 2.3 seconds · Groq LLaMA 3.3 70B</text>
+
+  <!-- CURRENT INPUT BOX -->
+  <rect x="218" y="485" width="772" height="63" rx="4" fill="#0a1a10" stroke="#9fef00" stroke-width="1.2"/>
+  <rect x="224" y="491" width="700" height="36" rx="3" fill="#050d08" stroke="#1a3a20" stroke-width="0.7"/>
+  <text x="232" y="514" font-family="monospace" font-size="8.5" fill="#9fef00">What happened between 02:10 and 02:25? Show me the full attack timeline.</text>
+  <rect x="232" y="510" width="5" height="11" fill="#9fef00" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="0.9s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Send button -->
+  <rect x="930" y="491" width="52" height="36" rx="4" fill="#0a2a18" stroke="#9fef00" stroke-width="1.2"/>
+  <text x="956" y="513" font-family="monospace" font-size="10" fill="#9fef00" text-anchor="middle">⏎</text>
+  <!-- Bottom labels -->
+  <text x="228" y="542" font-family="monospace" font-size="7" fill="#333">Powered by Groq LLaMA 3.3 70B · Local embeddings via Ollama · pgvector ANN search · 100% free</text>
+</svg>
