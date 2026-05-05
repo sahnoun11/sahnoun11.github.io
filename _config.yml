@@ -1,28 +1,31 @@
 markdown: kramdown
 kramdown:
   input: GFM
-# The Site Configuration
 
-# Import the theme
+# Theme
 theme: jekyll-theme-chirpy
 
-# The language of the webpage
+# Language & timezone
 lang: en
-
-# Timezone
 timezone: Africa/Tunis
 
-# jekyll-seo-tag settings
-# ↓ --------------------------
+# --------------------------
+# SEO & Site Info
+# --------------------------
 
 title: Oussama Sahnoun
 tagline: Cybersecurity | Red Teaming | Penetration Testing
-
 description: >-
-  Cybersecurity blog by Oussama Sahnoun. Focused on penetration testing, red teaming, and threat research, sharing insights, tutorials, and security guides for professionals and enthusiasts.
+  Cybersecurity blog by Oussama Sahnoun. Focused on penetration testing,
+  red teaming, and threat research, sharing insights, tutorials,
+  and security guides for professionals and enthusiasts.
 
-# Fill in the protocol & hostname for your site.
 url: "https://sahnoun11.github.io"
+baseurl: ""
+
+# --------------------------
+# Author / Social
+# --------------------------
 
 github:
   username: sahnoun11
@@ -38,102 +41,27 @@ social:
     - https://github.com/sahnoun11
     - https://www.linkedin.com/in/oussama-sahnoun-0ba565131/
 
-# Site Verification Settings
-webmaster_verifications:
-  google:
-  bing:
-  alexa:
-  yandex:
-  baidu:
-  facebook:
+# --------------------------
+# UI / Features
+# --------------------------
 
-# ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
-
-# Web Analytics Settings
-analytics:
-  google:
-    id:
-  goatcounter:
-    id:
-  umami:
-    id:
-    domain:
-  matomo:
-    id:
-    domain:
-  cloudflare:
-    id:
-  fathom:
-    id:
-
-# Page views settings
-pageviews:
-  provider:
-
-# Theme mode
-theme_mode:
-
-# CDN for media resources
-cdn:
-
-# Avatar
 avatar: "https://avatars.githubusercontent.com/u/35012242?v=4"
-
-# Social preview image
 social_preview_image: "https://avatars.githubusercontent.com/u/35012242?v=4"
 
-# Table of contents
 toc: true
 
-# Comments (disabled for now, can enable later)
-comments:
-  provider:
-  disqus:
-    shortname:
-  utterances:
-    repo:
-    issue_term:
-  giscus:
-    repo:
-    repo_id:
-    category:
-    category_id:
-    mapping:
-    strict:
-    input_position:
-    lang:
-    reactions_enabled:
-
-# Self-hosted static assets
-assets:
-  self_host:
-    enabled:
-    env:
-
+# Enable PWA
 pwa:
   enabled: true
   cache:
     enabled: true
-    deny_paths:
 
+# Pagination
 paginate: 10
 
-# The base URL of your site
-baseurl: ""
-
-# ------------ The following options are not recommended to be modified ------------------
-
-kramdown:
-  footnote_backlink: "&#8617;&#xfe0e;"
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: highlight
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+# --------------------------
+# Collections & Defaults
+# --------------------------
 
 collections:
   tabs:
@@ -160,6 +88,10 @@ defaults:
       layout: page
       permalink: /:title/
 
+# --------------------------
+# Build settings
+# --------------------------
+
 sass:
   style: compressed
 
@@ -167,8 +99,8 @@ compress_html:
   clippings: all
   comments: all
   endings: all
-  profile: false
   blanklines: false
+  profile: false
   ignore:
     envs: [development]
 
@@ -183,11 +115,13 @@ exclude:
   - "*.config.js"
   - "package*.json"
 
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+# --------------------------
+# IMPORTANT FIX
+# --------------------------
+# ❌ REMOVED jekyll-archives (conflict with Chirpy)
+# Chirpy already handles tags & categories
+
+# --------------------------
+# Optional (recommended)
+# --------------------------
+env: production
