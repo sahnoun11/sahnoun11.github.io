@@ -609,16 +609,18 @@ What should I investigate first and why?
 The current ThreatLens model is **question-and-answer**: an analyst asks, the system retrieves and generates. The next evolution is **agentic**: the analyst states a hypothesis, and an AI agent autonomously executes the hunting workflow.
 
 ```
-Analyst: "Investigate whether there is evidence of QakBot in our environment"
+# Analyst: "Investigate whether there is evidence of QakBot in our environment"
 
 Agent:
-  1. Query SIEM for Excel process anomalies → result: 3 suspicious events
-  2. Run QakBot YARA rules against flagged files → result: 1 match, confidence 0.91
-  3. Extract C2 communication from matched host's network logs → result: 2 external IPs
-  4. Check IPs against threat feeds → result: both in APT attribution lists
-  5. Reconstruct full timeline → result: initial access 14 days ago
-  6. Generate incident report with ATT&CK mapping
-  7. Return: "QakBot confirmed. Dwell time: 14 days. Recommend immediate isolation..."
+
+1. Query SIEM for Excel process anomalies → result: 3 suspicious events
+2. Run QakBot YARA rules against flagged files → result: 1 match, confidence 0.91
+3. Extract C2 communication from matched host's network logs → result: 2 external IPs
+4. Check IPs against threat feeds → result: both in APT attribution lists
+5. Reconstruct full timeline → result: initial access 14 days ago
+6. Generate incident report with ATT&CK mapping
+7. Return: "QakBot confirmed. Dwell time: 14 days. Recommend immediate isolation..."
+
 ```
 
 The primitives for this exist today: LangChain agents, Model Context Protocol (MCP) tool calling, SIEM APIs, ReAct prompting patterns. The integration work is what remains.
@@ -702,12 +704,6 @@ I believe the defenders will win. And I am genuinely excited to see what this ge
 **ThreatLens:**
 - GitHub: [github.com/sahnoun11/ThreatLens](https://github.com/sahnoun11/ThreatLens)
 - Demo: [youtu.be/9Wmxwix6MYk](https://youtu.be/9Wmxwix6MYk?si=Be9r7D0z7wNrAcyv)
-
-**Find me:**
-- Twitter/X: [@Sahnounoussama5](https://x.com/Sahnounoussama5)
-- GitHub: [github.com/sahnoun11](https://github.com/sahnoun11)
-- LinkedIn: [linkedin.com/in/oussama-sahnoun-0ba565131](https://linkedin.com/in/oussama-sahnoun-0ba565131/)
-- Blog: [sahnoun11.github.io](https://sahnoun11.github.io/)
 
 **Essential reading:**
 - [MITRE ATT&CK Framework](https://attack.mitre.org/)
