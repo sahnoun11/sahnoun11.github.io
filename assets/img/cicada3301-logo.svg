@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="680" viewBox="0 0 680 680">
+<!-- Outer hex ring -->
+<polygon points="340,30 620,195 620,485 340,650 60,485 60,195" fill="none" stroke="#A32D2D" stroke-width="2" opacity="0.6"/>
+<polygon points="340,50 600,207 600,473 340,630 80,473 80,207" fill="none" stroke="#A32D2D" stroke-width="0.5" opacity="0.3"/>
+<!-- Hex ticks -->
+<line x1="340" y1="30" x2="340" y2="50" stroke="#E24B4A" stroke-width="2"/>
+<line x1="620" y1="195" x2="600" y2="207" stroke="#E24B4A" stroke-width="2"/>
+<line x1="620" y1="485" x2="600" y2="473" stroke="#E24B4A" stroke-width="2"/>
+<line x1="340" y1="650" x2="340" y2="630" stroke="#E24B4A" stroke-width="2"/>
+<line x1="60" y1="485" x2="80" y2="473" stroke="#E24B4A" stroke-width="2"/>
+<line x1="60" y1="195" x2="80" y2="207" stroke="#E24B4A" stroke-width="2"/>
+<!-- Body -->
+<ellipse cx="340" cy="340" rx="52" ry="130" fill="#1a0000" stroke="#E24B4A" stroke-width="1.5"/>
+<!-- Body segments -->
+<line x1="295" y1="290" x2="385" y2="290" stroke="#E24B4A" stroke-width="0.8" opacity="0.6"/>
+<line x1="295" y1="320" x2="385" y2="320" stroke="#E24B4A" stroke-width="0.8" opacity="0.6"/>
+<line x1="295" y1="350" x2="385" y2="350" stroke="#E24B4A" stroke-width="0.8" opacity="0.6"/>
+<line x1="295" y1="380" x2="385" y2="380" stroke="#E24B4A" stroke-width="0.8" opacity="0.6"/>
+<line x1="295" y1="410" x2="385" y2="410" stroke="#E24B4A" stroke-width="0.8" opacity="0.6"/>
+<!-- Head -->
+<ellipse cx="340" cy="215" rx="38" ry="30" fill="#1a0000" stroke="#E24B4A" stroke-width="1.5"/>
+<!-- Eyes -->
+<circle cx="322" cy="208" r="9" fill="#E24B4A" opacity="0.9"/>
+<circle cx="358" cy="208" r="9" fill="#E24B4A" opacity="0.9"/>
+<circle cx="322" cy="208" r="4" fill="#501313"/>
+<circle cx="358" cy="208" r="4" fill="#501313"/>
+<circle cx="320" cy="206" r="2" fill="#F09595" opacity="0.8"/>
+<circle cx="356" cy="206" r="2" fill="#F09595" opacity="0.8"/>
+<!-- Antennae -->
+<path d="M330 188 Q290 140 240 100" fill="none" stroke="#E24B4A" stroke-width="1.2"/>
+<path d="M350 188 Q390 140 440 100" fill="none" stroke="#E24B4A" stroke-width="1.2"/>
+<circle cx="240" cy="100" r="4" fill="#E24B4A"/>
+<circle cx="440" cy="100" r="4" fill="#E24B4A"/>
+<!-- Left wings -->
+<path d="M305 260 Q200 180 110 200 Q90 240 120 280 Q180 300 305 295" fill="#500808" stroke="#E24B4A" stroke-width="1" opacity="0.85"/>
+<path d="M305 320 Q180 340 100 400 Q110 460 160 460 Q240 440 308 380" fill="#3d0606" stroke="#C0392B" stroke-width="1" opacity="0.75"/>
+<!-- Right wings -->
+<path d="M375 260 Q480 180 570 200 Q590 240 560 280 Q500 300 375 295" fill="#500808" stroke="#E24B4A" stroke-width="1" opacity="0.85"/>
+<path d="M375 320 Q500 340 580 400 Q570 460 520 460 Q440 440 372 380" fill="#3d0606" stroke="#C0392B" stroke-width="1" opacity="0.75"/>
+<!-- Wing veins -->
+<path d="M300 265 Q230 215 160 225" fill="none" stroke="#F09595" stroke-width="0.5" opacity="0.5"/>
+<path d="M380 265 Q450 215 520 225" fill="none" stroke="#F09595" stroke-width="0.5" opacity="0.5"/>
+<path d="M300 280 Q240 248 195 255" fill="none" stroke="#F09595" stroke-width="0.5" opacity="0.4"/>
+<path d="M380 280 Q440 248 485 255" fill="none" stroke="#F09595" stroke-width="0.5" opacity="0.4"/>
+<!-- Legs left -->
+<line x1="295" y1="310" x2="220" y2="345" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="220" y1="345" x2="175" y2="325" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="295" y1="350" x2="215" y2="380" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="215" y1="380" x2="170" y2="365" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="295" y1="395" x2="210" y2="420" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="210" y1="420" x2="162" y2="410" stroke="#E24B4A" stroke-width="1.2"/>
+<!-- Legs right -->
+<line x1="385" y1="310" x2="460" y2="345" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="460" y1="345" x2="505" y2="325" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="385" y1="350" x2="465" y2="380" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="465" y1="380" x2="510" y2="365" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="385" y1="395" x2="470" y2="420" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="470" y1="420" x2="518" y2="410" stroke="#E24B4A" stroke-width="1.2"/>
+<!-- Circuit nodes on wings -->
+<circle cx="160" cy="235" r="3" fill="none" stroke="#F09595" stroke-width="0.8"/>
+<circle cx="135" cy="258" r="3" fill="none" stroke="#F09595" stroke-width="0.8"/>
+<line x1="160" y1="235" x2="135" y2="258" stroke="#F09595" stroke-width="0.5" opacity="0.5"/>
+<circle cx="520" cy="235" r="3" fill="none" stroke="#F09595" stroke-width="0.8"/>
+<circle cx="545" cy="258" r="3" fill="none" stroke="#F09595" stroke-width="0.8"/>
+<line x1="520" y1="235" x2="545" y2="258" stroke="#F09595" stroke-width="0.5" opacity="0.5"/>
+<!-- Center chest circuit -->
+<rect x="324" y="312" rx="3" ry="3" width="32" height="20" fill="none" stroke="#E24B4A" stroke-width="0.8"/>
+<line x1="324" y1="322" x2="308" y2="322" stroke="#E24B4A" stroke-width="0.5"/>
+<line x1="356" y1="322" x2="372" y2="322" stroke="#E24B4A" stroke-width="0.5"/>
+<circle cx="340" cy="322" r="3" fill="#E24B4A" opacity="0.8"/>
+<!-- Tail -->
+<path d="M320 465 Q340 492 360 465" fill="none" stroke="#E24B4A" stroke-width="1.2"/>
+<line x1="340" y1="492" x2="340" y2="510" stroke="#E24B4A" stroke-width="1.2"/>
+<!-- Text -->
+<text x="340" y="570" text-anchor="middle" font-family="'Courier New', monospace" font-size="28" font-weight="700" fill="#E24B4A" letter-spacing="6">CICADA3301</text>
+<text x="340" y="600" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#A32D2D" letter-spacing="3">RANSOMWARE — REPELLENT SCORPIUS</text>
+<!-- Binary corner decorations -->
+<text x="72" y="175" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#501313" opacity="0.8">01001010</text>
+<text x="72" y="510" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#501313" opacity="0.8">10110101</text>
+<text x="608" y="175" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#501313" opacity="0.8">11001001</text>
+<text x="608" y="510" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#501313" opacity="0.8">00110110</text>
+</svg>
