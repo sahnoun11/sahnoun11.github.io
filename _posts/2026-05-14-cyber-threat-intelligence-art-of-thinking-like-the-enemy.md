@@ -10,7 +10,7 @@ image:
 author: sahnoun11
 toc: true
 comments: true
-pin: true
+pin: false
 math: false
 mermaid: false
 ---

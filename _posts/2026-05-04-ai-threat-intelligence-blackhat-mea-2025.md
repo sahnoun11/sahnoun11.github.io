@@ -10,7 +10,7 @@ description: >-
 image:
   path: /assets/img/hero.svg
   alt: "AI and Threat Intelligence — Black Hat MEA 2025 — Oussama Sahnoun"
-pin: true
+pin: false
 math: false
 mermaid: false
 ---
