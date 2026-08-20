@@ -4,7 +4,7 @@ title: CVE-2022–45875 Command Injection Vulnerability in Apache DolphinSchedul
 categories:
 - Red Teaming
 tags:
-- Red Team
+- red-team
 - Pentest
 - HTB
 - CVE

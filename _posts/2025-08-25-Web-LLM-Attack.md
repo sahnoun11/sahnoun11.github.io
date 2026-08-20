@@ -4,13 +4,13 @@ title: "Web LLM Attacks - Part 1: A Deep Dive into the Security Risks of AI-Powe
 categories:
 - IA Exploit
 tags:
-- Red Team
+- red-team
 - Pentest
 - HTB
 - CVE
 - Bug Bounty
 - IA Exploit
-- LLM
+- llm
 date: 2025-08-26 01:00 +0100
 description: As organizations increasingly integrate Large Language Models (LLMs) into their web applications to enhance user experience, they inadvertently expose themselves to a new class of vulnerabilities known as Web LLM Attacks. These attacks leverage the LLM's access to data, APIs, and user information, enabling adversaries to perform actions that would typically be inaccessible.
 image: assets/img/LLM.jpeg

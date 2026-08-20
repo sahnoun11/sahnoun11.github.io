@@ -1,0 +1,68 @@
+{%- comment -%}
+  Series navigation box. Renders when page.series is set.
+  Required front matter on each post in the series:
+    series: <slug>            -- shared key used to group posts
+    series_name: "Display Name"
+    series_part: <integer>    -- 1-based order within the series
+    series_total: <integer>   -- total number of parts (final count)
+    series_hub_url: "/posts/..."  -- link back to the series index/hub post
+  Usage: {% include series-nav.html %} for the compact top variant,
+         {% include series-nav.html position="bottom" %} for the full prev/next variant.
+{%- endcomment -%}
+
+{%- assign series_posts = site.posts | where: "series", page.series | sort: "series_part" -%}
+{%- assign _idx0 = nil -%}
+{%- for p in series_posts -%}
+  {%- if p.url == page.url -%}
+    {%- assign _idx0 = forloop.index0 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign prev_post = nil -%}
+{%- assign next_post = nil -%}
+{%- if _idx0 -%}
+  {%- assign _prev_idx = _idx0 | minus: 1 -%}
+  {%- if _prev_idx >= 0 -%}
+    {%- assign prev_post = series_posts[_prev_idx] -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if _idx0 -%}
+  {%- assign _next_idx = _idx0 | plus: 1 -%}
+  {%- assign next_post = series_posts[_next_idx] -%}
+{%- endif -%}
+
+<div class="series-nav card mt-3 mb-4">
+  <div class="card-body py-2 px-3">
+    <div class="d-flex align-items-center flex-wrap" style="gap: .5rem;">
+      <span class="text-muted small">
+        <i class="fas fa-layer-group me-1"></i>{{ page.series_name | default: page.series }}
+        {% if page.series_part %}&middot; Part {{ page.series_part }}{% if page.series_total %} of {{ page.series_total }}{% endif %}{% endif %}
+      </span>
+      {% if page.series_hub_url %}
+        <a href="{{ page.series_hub_url | relative_url }}" class="small ms-auto">
+          <i class="fas fa-list-ul me-1"></i>Series hub
+        </a>
+      {% endif %}
+    </div>
+
+    {% if include.position == "bottom" and (prev_post or next_post) %}
+      <hr class="my-2">
+      <div class="d-flex justify-content-between align-items-start flex-wrap" style="gap: .75rem;">
+        <div class="text-start" style="max-width: 46%;">
+          {% if prev_post %}
+            <a href="{{ prev_post.url | relative_url }}">
+              <i class="fas fa-chevron-left me-1"></i>{{ prev_post.title }}
+            </a>
+          {% endif %}
+        </div>
+        <div class="text-end" style="max-width: 46%;">
+          {% if next_post %}
+            <a href="{{ next_post.url | relative_url }}">
+              {{ next_post.title }}<i class="fas fa-chevron-right ms-1"></i>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

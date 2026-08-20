@@ -2,7 +2,7 @@
 title: "Cyber Threat Intelligence: The Art of Thinking Like the Enemy"
 date: 2026-05-14 09:00:00 +0000
 categories: [Cybersecurity, Threat Intelligence]
-tags: [CTI, MITRE ATT&CK, SIEM, SOAR, IoC, STIX, TAXII, TLP, APT, threat actors, sigma, yara, cognitive bias]
+tags: [cti, MITRE ATT&CK, SIEM, SOAR, ioc, STIX, TAXII, TLP, APT, threat actors, sigma, yara, cognitive bias]
 description: "A deep technical and strategic guide to Cyber Threat Intelligence — from the lifecycle and MITRE ATT&CK heatmap coverage to IoC enrichment pipelines, cognitive bias in triage, and structured case study analysis of SolarWinds and NotPetya."
 image:
   path: /assets/img/cti-anime-hero.svg
